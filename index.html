@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" href="/models/durian-compressed.glb" as="fetch" crossorigin="anonymous" />
+    <meta
+      name="description"
+      content="Dukrian 有家榴莲 — shop Blackgold MSW durian online in Singapore. Serangoon Garden, farm-to-table in ~12h, checkout on dukrian.com, WhatsApp 8483 8466."
+    />
+    <title>Dukrian 有家榴莲 | Fresh MSW Durian Singapore</title>
+    <!-- Meta Pixel Code — https://developers.facebook.com/docs/meta-pixel/get-started/ -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        }
+        if (!f._fbq) f._fbq = n
+        n.push = n
+        n.loaded = !0
+        n.version = '2.0'
+        n.queue = []
+        t = b.createElement(e)
+        t.async = !0
+        t.src = v
+        s = b.getElementsByTagName(e)[0]
+        s.parentNode.insertBefore(t, s)
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js')
+      fbq('init', '1475318470885625')
+      fbq('track', 'PageView')
+    </script>
+    <!-- End Meta Pixel Code (noscript fallback must be in body — not allowed inside <head> per HTML5) -->
+  </head>
+  <body>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1475318470885625&amp;ev=PageView&amp;noscript=1"
+        alt=""
+      />
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
