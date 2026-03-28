@@ -9,7 +9,7 @@ Modern marketing and **on-site shopping** experience for **Dukrian** (有家榴�
 | Layer | Choice |
 |--------|--------|
 | UI | **React 19** + **TypeScript** |
-| Build | **Vite 8** (`@vitejs/plugin-react`) |
+| Build | **Vite 5.4** + **`@vitejs/plugin-react` 4.x** (Node 18–compatible; Vite 8 requires Node 20.19+) |
 | 3D | **Three.js** (lazy-loaded canvas, GLTF loader) |
 | Icons | **lucide-react** |
 | Styling | Global **CSS** (`src/index.css`) — custom properties, no CSS-in-JS |
@@ -18,8 +18,10 @@ Modern marketing and **on-site shopping** experience for **Dukrian** (有家榴�
 
 ## Prerequisites
 
-- **Node.js** 20+ (recommended; matches current toolchain)
+- **Node.js** **≥ 18.18** (declared in `package.json` → `engines.node`)
 - **npm** (or compatible client)
+
+**Why not Vite 8?** Vite 8 and `@vitejs/plugin-react` 6 require **Node 20.19+** (or 22.12+). Hosts such as **Tencent CloudBase** default builders often ship **Node 18.x**, which then fails at `vite build` (`CustomEvent is not defined` in the CLI). This repo pins **Vite 5.4** so `npm run build` succeeds on Node 18. When your CI upgrades to Node 20+, you may bump Vite/plugin again if desired.
 
 ---
 
@@ -180,6 +182,7 @@ Output: **`dist/`** — static assets suitable for any static host (Netlify, Ver
 
 ## Deployment checklist
 
+- [ ] CI / CloudBase: use **Node ≥ 18.18** (or 20+); run `npm ci` / `npm install` then `npm run build` from the **repository root** (where `package.json` lives)
 - [ ] Set correct **`SITE.origin`** and social URLs in `config.ts`
 - [ ] Replace **`public/favicon.png`** if needed
 - [ ] Ensure **`public/images/dukrian/*.png`** (and `channel-*.jpg` if used) are present
