@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { SEOHead } from '../components/seo/SEOHead'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
+import { BtnLink } from '../components/BtnLink'
 import { SITE } from '../config'
 
 export default function HowToFindRipeDurianPage() {
@@ -63,7 +64,7 @@ export default function HowToFindRipeDurianPage() {
           </p>
         </header>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Why Knowing How to Assess Durian Matters</h2>
           <p>
             Durian is unlike most fruit — you can't see the flesh before buying, and the price premium
@@ -78,7 +79,7 @@ export default function HowToFindRipeDurianPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>The 6 Tests for Picking Ripe Durian</h2>
 
           <h3>1. The Stem Check</h3>
@@ -152,7 +153,7 @@ export default function HowToFindRipeDurianPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>How to Assess De-husked Durian</h2>
           <p>
             When buying pre-packed de-husked durian (like what we sell at Dukrian), you can't do the
@@ -180,7 +181,7 @@ export default function HowToFindRipeDurianPage() {
           </ul>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Variety-Specific Tips</h2>
 
           <h3>Choosing Good Blackgold MSW</h3>
@@ -205,7 +206,7 @@ export default function HowToFindRipeDurianPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Red Flags: Signs of Bad Durian</h2>
           <ul>
             <li><strong>Sour or rotting smell</strong> — the fruit is spoiled; do not consume</li>
@@ -220,7 +221,7 @@ export default function HowToFindRipeDurianPage() {
           </p>
         </section>
 
-        <section className="seo-page__section seo-page__section--faq">
+        <section className="seo-page__section reveal seo-page__section--faq">
           <h2>Frequently Asked Questions</h2>
 
           <details className="seo-faq">
@@ -258,7 +259,7 @@ export default function HowToFindRipeDurianPage() {
           </details>
         </section>
 
-        <section className="seo-page__section seo-page__cta-section">
+        <section className="seo-page__section reveal seo-page__cta-section">
           <h2>Skip the Guesswork — Order from Dukrian</h2>
           <p>
             Our expert team does the selection for you. Every box of{' '}
@@ -267,15 +268,15 @@ export default function HowToFindRipeDurianPage() {
             your door via <Link to="/same-day-durian-delivery">same-day delivery</Link>.
           </p>
           <div className="seo-page__actions">
-            <Link to="/#shop" className="btn btn--primary">Shop Quality Durian</Link>
-            <a
-              className="btn btn--ghost"
+            <BtnLink to="/#shop">Shop Quality Durian</BtnLink>
+            <BtnLink
+              variant="ghost"
               href={`https://wa.me/${SITE.whatsappE164}`}
               target="_blank"
               rel="noreferrer"
             >
               Ask Us Anything
-            </a>
+            </BtnLink>
           </div>
         </section>
       </article>

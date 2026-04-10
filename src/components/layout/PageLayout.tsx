@@ -6,7 +6,7 @@ import { Cart } from '../Cart'
 
 export function PageLayout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo({ top: 0, behavior: 'instant' })
   }, [])
 
   return (

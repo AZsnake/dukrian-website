@@ -21,7 +21,7 @@ export function ShopSection() {
   )
 
   return (
-    <section className="section shop-section" id="shop">
+    <section className="section shop-section reveal" id="shop">
       <div className="section__inner">
         <h2 className="section__title">Shop Dukrian</h2>
         <p className="section__prose section__prose--tight">

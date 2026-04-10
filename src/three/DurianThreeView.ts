@@ -17,10 +17,7 @@ import {
   snapshotsApproxEqual,
   writeSceneSnapshot,
 } from './sceneIdleSnapshot'
-import { MIN_CANVAS_DPR, resolveCanvasPixelRatio } from './adaptivePixelRatio'
-
-/** After wheel/scroll/touch, skip half of WebGL draws to free the GPU for compositing. */
-const SCROLL_PERF_MS = 220
+import { resolveCanvasPixelRatio } from './adaptivePixelRatio'
 
 const DRACO_DECODER_BASE = 'https://www.gstatic.com/draco/versioned/decoders/1.5.6/'
 
@@ -81,7 +78,6 @@ export class DurianThreeView {
   private readonly camera: THREE.PerspectiveCamera
   private readonly outerGroup = new THREE.Group()
   private readonly resizeObserver: ResizeObserver
-  private resizeRaf = 0
   private readonly idleSnapCur = new Float32Array(IDLE_SNAPSHOT_FLOATS)
   private readonly idleSnapLast = new Float32Array(IDLE_SNAPSHOT_FLOATS)
   private idleSnapshotValid = false
@@ -97,15 +93,7 @@ export class DurianThreeView {
   private cutGroup: THREE.Group | null = null
   private modelRoot: THREE.Group | null = null
   private readonly tiltSmooth = { x: 0, y: 0 }
-  /** Monotonic deadline (performance.now): while active, render every other frame only. */
-  private scrollGpuBudgetUntil = 0
-  private scrollRenderPhase = 0
-  /** Baseline from last `resize()`; scroll may temporarily use a lower applied ratio. */
-  private nominalPixelRatio = 1
-  private appliedPixelRatio = -1
-  private readonly markScrollGpuBudget = () => {
-    this.scrollGpuBudgetUntil = performance.now() + SCROLL_PERF_MS
-  }
+  private needsResize = false
 
   constructor(container: HTMLElement, opts: DurianThreeViewOptions) {
     this.container = container
@@ -135,26 +123,20 @@ export class DurianThreeView {
 
     this.setupLights()
     this.setupGround()
-    this.applyEnvironmentMap()
 
     this.scene.add(this.outerGroup)
 
+    this.deferEnvironmentMap()
+
     this.resizeObserver = new ResizeObserver(() => {
       if (this.disposed) return
-      if (this.resizeRaf) return
-      this.resizeRaf = requestAnimationFrame(() => {
-        this.resizeRaf = 0
-        this.resize()
-      })
+      this.needsResize = true
     })
     this.resizeObserver.observe(this.container)
     this.resize()
 
     this.renderer.domElement.addEventListener('webglcontextlost', this.onContextLost, false)
     document.addEventListener('visibilitychange', this.onVisibilityChange)
-    window.addEventListener('scroll', this.markScrollGpuBudget, { passive: true })
-    window.addEventListener('wheel', this.markScrollGpuBudget, { passive: true })
-    window.addEventListener('touchmove', this.markScrollGpuBudget, { passive: true })
 
     this.startLoop()
     void this.loadModel()
@@ -197,13 +179,22 @@ export class DurianThreeView {
     this.scene.add(ground)
   }
 
-  private applyEnvironmentMap() {
-    const pmrem = new THREE.PMREMGenerator(this.renderer)
-    const envScene = new RoomEnvironment()
-    const rt = pmrem.fromScene(envScene, 0.04)
-    this.scene.environment = rt.texture
-    envScene.dispose()
-    pmrem.dispose()
+  private deferEnvironmentMap() {
+    const apply = () => {
+      if (this.disposed) return
+      const pmrem = new THREE.PMREMGenerator(this.renderer)
+      const envScene = new RoomEnvironment()
+      const rt = pmrem.fromScene(envScene, 0.04)
+      this.scene.environment = rt.texture
+      envScene.dispose()
+      pmrem.dispose()
+      this.idleSnapshotValid = false
+    }
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(() => apply(), { timeout: 200 })
+    } else {
+      setTimeout(apply, 0)
+    }
   }
 
   private createGltfLoader() {
@@ -274,30 +265,10 @@ export class DurianThreeView {
     const w = Math.max(1, this.container.clientWidth)
     const h = Math.max(1, this.container.clientHeight)
     const dpr = resolveCanvasPixelRatio(w, h)
-    this.nominalPixelRatio = dpr
     this.camera.aspect = w / h
     this.camera.updateProjectionMatrix()
-    this.appliedPixelRatio = dpr
     this.renderer.setPixelRatio(dpr)
     this.renderer.setSize(w, h)
-    this.idleSnapshotValid = false
-  }
-
-  /** Large windows + scroll: briefly shave DPR further (same total-pixel strategy). */
-  private syncPixelRatioForScrollState() {
-    if (this.disposed) return
-    const scrollBusy = performance.now() < this.scrollGpuBudgetUntil
-    const target = scrollBusy
-      ? Math.max(MIN_CANVAS_DPR, this.nominalPixelRatio * 0.82)
-      : this.nominalPixelRatio
-    if (Math.abs(target - this.appliedPixelRatio) < 0.01) return
-    this.appliedPixelRatio = target
-    this.renderer.setPixelRatio(target)
-    const w = Math.max(1, this.container.clientWidth)
-    const h = Math.max(1, this.container.clientHeight)
-    this.renderer.setSize(w, h)
-    this.camera.aspect = w / h
-    this.camera.updateProjectionMatrix()
     this.idleSnapshotValid = false
   }
 
@@ -309,7 +280,10 @@ export class DurianThreeView {
     }
     this.raf = requestAnimationFrame(this.tick)
 
-    this.syncPixelRatioForScrollState()
+    if (this.needsResize) {
+      this.needsResize = false
+      this.resize()
+    }
 
     updateScrollCamera(this.camera, this.opts)
 
@@ -327,14 +301,6 @@ export class DurianThreeView {
       updateFallbackDurianFrame({ outer: this.outerGroup, tiltSmooth: this.tiltSmooth }, this.opts)
     }
 
-    const scrollBusy = performance.now() < this.scrollGpuBudgetUntil
-    if (scrollBusy) {
-      this.scrollRenderPhase++
-      if (this.scrollRenderPhase % 2 === 1) return
-    } else {
-      this.scrollRenderPhase = 0
-    }
-
     const scrollP = this.opts.reducedMotionRef.current ? 0.5 : this.opts.progressRef.current
     writeSceneSnapshot(
       this.camera,
@@ -347,7 +313,6 @@ export class DurianThreeView {
     if (
       this.mode !== 'pending' &&
       this.idleSnapshotValid &&
-      !scrollBusy &&
       snapshotsApproxEqual(this.idleSnapCur, this.idleSnapLast)
     ) {
       return
@@ -368,13 +333,9 @@ export class DurianThreeView {
   dispose() {
     this.disposed = true
     cancelAnimationFrame(this.raf)
-    if (this.resizeRaf) cancelAnimationFrame(this.resizeRaf)
     this.resizeObserver.disconnect()
     this.renderer.domElement.removeEventListener('webglcontextlost', this.onContextLost)
     document.removeEventListener('visibilitychange', this.onVisibilityChange)
-    window.removeEventListener('scroll', this.markScrollGpuBudget)
-    window.removeEventListener('wheel', this.markScrollGpuBudget)
-    window.removeEventListener('touchmove', this.markScrollGpuBudget)
 
     this.clearOuterContent()
 

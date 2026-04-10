@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { SEOHead } from '../components/seo/SEOHead'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
+import { BtnLink } from '../components/BtnLink'
 import { SITE } from '../config'
 
 export default function DurianBundlesPage() {
@@ -47,7 +48,7 @@ export default function DurianBundlesPage() {
           </p>
         </header>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Why Order a Durian Bundle?</h2>
           <p>
             The best way to experience durian isn't just eating one variety — it's comparing several
@@ -64,7 +65,7 @@ export default function DurianBundlesPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Our Bundle Options</h2>
 
           <div className="seo-page__price-cards">
@@ -95,7 +96,7 @@ export default function DurianBundlesPage() {
           </div>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>What's Included in Our Bundles?</h2>
           <p>
             Every Dukrian bundle is built around our core commitment to freshness and quality:
@@ -124,7 +125,7 @@ export default function DurianBundlesPage() {
           </ul>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Popular Bundle Combinations</h2>
           <p>Based on our most popular orders, here are some winning bundle ideas:</p>
 
@@ -148,7 +149,7 @@ export default function DurianBundlesPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>How to Order a Durian Bundle</h2>
           <ol>
             <li>
@@ -173,7 +174,7 @@ export default function DurianBundlesPage() {
           </p>
         </section>
 
-        <section className="seo-page__section seo-page__section--faq">
+        <section className="seo-page__section reveal seo-page__section--faq">
           <h2>Frequently Asked Questions: Durian Bundles</h2>
 
           <details className="seo-faq">
@@ -212,22 +213,22 @@ export default function DurianBundlesPage() {
           </details>
         </section>
 
-        <section className="seo-page__section seo-page__cta-section">
+        <section className="seo-page__section reveal seo-page__cta-section">
           <h2>Build Your Durian Bundle</h2>
           <p>
             Whether it's two boxes for date night or twenty for the whole office, we'll make sure
             everyone gets their fill of premium durian.
           </p>
           <div className="seo-page__actions">
-            <Link to="/#shop" className="btn btn--primary">Shop All Durians</Link>
-            <a
-              className="btn btn--ghost"
+            <BtnLink to="/#shop">Shop All Durians</BtnLink>
+            <BtnLink
+              variant="ghost"
               href={`https://wa.me/${SITE.whatsappE164}?text=${encodeURIComponent('Hi Dukrian! I\'d like to order a durian bundle for [number] people.')}`}
               target="_blank"
               rel="noreferrer"
             >
               Custom Bundle via WhatsApp
-            </a>
+            </BtnLink>
           </div>
         </section>
       </article>

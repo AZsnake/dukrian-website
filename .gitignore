@@ -22,3 +22,24 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# AI tools
+.cursor/
+.cursorignore
+.cursorrules
+.cursor-tasks
+.copilot/
+.github/copilot*
+.aider*
+.windsurf/
+.codeium/
+.tabnine/
+.continue/
+.bolt/
+.v0/
+.prompts/
+AGENTS.md
+.claude*
+
+# Dev-only scripts
+scripts/

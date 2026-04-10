@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { SEOHead } from '../components/seo/SEOHead'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
+import { BtnLink } from '../components/BtnLink'
 import { SITE } from '../config'
 
 export default function DurianDealsPage() {
@@ -47,7 +48,7 @@ export default function DurianDealsPage() {
           </p>
         </header>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Current Promotions at Dukrian</h2>
           <p>
             At <strong>Dukrian ({SITE.nameCn})</strong>, we believe premium durian should be accessible.
@@ -82,7 +83,7 @@ export default function DurianDealsPage() {
           </div>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>How to Get the Best Value on Durian</h2>
           <p>
             Buying smart during <Link to="/durian-season">durian season</Link> can save you significantly.
@@ -123,7 +124,7 @@ export default function DurianDealsPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Seasonal Durian Price Guide</h2>
           <p>
             Durian prices in Singapore fluctuate significantly throughout the year based on supply:
@@ -152,7 +153,7 @@ export default function DurianDealsPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Student and Group Discounts</h2>
           <p>
             Planning a durian party for your school, university group, or community? Contact us via
@@ -161,7 +162,7 @@ export default function DurianDealsPage() {
           </p>
         </section>
 
-        <section className="seo-page__section seo-page__section--faq">
+        <section className="seo-page__section reveal seo-page__section--faq">
           <h2>Frequently Asked Questions: Durian Deals</h2>
 
           <details className="seo-faq">
@@ -200,22 +201,22 @@ export default function DurianDealsPage() {
           </details>
         </section>
 
-        <section className="seo-page__section seo-page__cta-section">
+        <section className="seo-page__section reveal seo-page__cta-section">
           <h2>Don't Miss Our Next Deal</h2>
           <p>
             Join our WhatsApp broadcast to be the first to know about flash deals, limited lots,
             and seasonal promotions. Or shop now and enjoy our current offers.
           </p>
           <div className="seo-page__actions">
-            <Link to="/#shop" className="btn btn--primary">Shop Current Deals</Link>
-            <a
-              className="btn btn--ghost"
+            <BtnLink to="/#shop">Shop Current Deals</BtnLink>
+            <BtnLink
+              variant="ghost"
               href={`https://wa.me/${SITE.whatsappE164}?text=${encodeURIComponent('Hi Dukrian! Please add me to your WhatsApp broadcast for deal alerts.')}`}
               target="_blank"
               rel="noreferrer"
             >
               Join WhatsApp Broadcast
-            </a>
+            </BtnLink>
           </div>
         </section>
       </article>

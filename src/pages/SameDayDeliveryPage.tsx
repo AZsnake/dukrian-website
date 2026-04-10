@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { SEOHead } from '../components/seo/SEOHead'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
+import { BtnLink } from '../components/BtnLink'
 import { SITE } from '../config'
 
 export default function SameDayDeliveryPage() {
@@ -47,7 +48,7 @@ export default function SameDayDeliveryPage() {
           </p>
         </header>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>How Same-Day Delivery Works</h2>
           <p>
             At <strong>Dukrian ({SITE.nameCn})</strong>, same-day delivery isn't just convenient — it's
@@ -77,7 +78,7 @@ export default function SameDayDeliveryPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Same-Day Delivery: Step by Step</h2>
           <ol>
             <li>
@@ -105,7 +106,7 @@ export default function SameDayDeliveryPage() {
           </ol>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Same-Day Delivery Fees</h2>
           <p>
             Same-day delivery follows the same fee structure as our{' '}
@@ -125,7 +126,7 @@ export default function SameDayDeliveryPage() {
           </div>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>When Same-Day Delivery is Available</h2>
           <p>
             Same-day delivery operates daily during <Link to="/durian-season">durian season</Link> (typically
@@ -143,7 +144,7 @@ export default function SameDayDeliveryPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Tips for a Smooth Same-Day Delivery</h2>
           <ul>
             <li>
@@ -165,7 +166,7 @@ export default function SameDayDeliveryPage() {
           </ul>
         </section>
 
-        <section className="seo-page__section seo-page__section--faq">
+        <section className="seo-page__section reveal seo-page__section--faq">
           <h2>Frequently Asked Questions: Same-Day Delivery</h2>
 
           <details className="seo-faq">
@@ -211,22 +212,22 @@ export default function SameDayDeliveryPage() {
           </details>
         </section>
 
-        <section className="seo-page__section seo-page__cta-section">
+        <section className="seo-page__section reveal seo-page__cta-section">
           <h2>Order Now for Same-Day Delivery</h2>
           <p>
             Fresh <Link to="/blackgold-msw">Blackgold MSW</Link>,{' '}
             <Link to="/d24-sultan">D24 Sultan</Link>, and more — at your door tonight.
           </p>
           <div className="seo-page__actions">
-            <Link to="/#shop" className="btn btn--primary">Order Before 6 PM</Link>
-            <a
-              className="btn btn--ghost"
+            <BtnLink to="/#shop">Order Before 6 PM</BtnLink>
+            <BtnLink
+              variant="ghost"
               href={`https://wa.me/${SITE.whatsappE164}?text=${encodeURIComponent('Hi Dukrian! I\'d like same-day delivery today.')}`}
               target="_blank"
               rel="noreferrer"
             >
               WhatsApp for Quick Order
-            </a>
+            </BtnLink>
           </div>
         </section>
       </article>

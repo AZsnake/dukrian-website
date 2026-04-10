@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { SEOHead } from '../components/seo/SEOHead'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
+import { BtnLink } from '../components/BtnLink'
 import { SITE } from '../config'
 
 export default function D24SultanPage() {
@@ -25,7 +26,7 @@ export default function D24SultanPage() {
               priceCurrency: 'SGD',
               availability: 'https://schema.org/InStock',
             },
-            image: `${SITE.origin}/images/dukrian/6.png`,
+            image: `${SITE.origin}/images/dukrian/6.webp`,
           },
           {
             '@context': 'https://schema.org',
@@ -63,7 +64,7 @@ export default function D24SultanPage() {
           </p>
         </header>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>The Story of D24 Sultan</h2>
           <p>
             Before Musang King claimed the spotlight, <strong>D24 Sultan</strong> was the undisputed king
@@ -80,7 +81,7 @@ export default function D24SultanPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>D24 Sultan Flavour Profile</h2>
           <p>
             What makes D24 Sultan so enduringly popular is its balanced, approachable character:
@@ -108,7 +109,7 @@ export default function D24SultanPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>D24 Sultan vs Musang King: What's the Difference?</h2>
           <div className="seo-page__comparison">
             <table className="seo-table">
@@ -136,7 +137,7 @@ export default function D24SultanPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>D24 Sultan Availability and Season</h2>
           <p>
             D24 Sultan is available at Dukrian during the main <Link to="/durian-season">durian season</Link> in
@@ -150,7 +151,7 @@ export default function D24SultanPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Pricing</h2>
           <div className="seo-page__price-cards">
             <div className="seo-page__price-card">
@@ -165,7 +166,7 @@ export default function D24SultanPage() {
           </p>
         </section>
 
-        <section className="seo-page__section seo-page__section--faq">
+        <section className="seo-page__section reveal seo-page__section--faq">
           <h2>Frequently Asked Questions: D24 Sultan</h2>
 
           <details className="seo-faq">
@@ -205,7 +206,7 @@ export default function D24SultanPage() {
           </details>
         </section>
 
-        <section className="seo-page__section seo-page__cta-section">
+        <section className="seo-page__section reveal seo-page__cta-section">
           <h2>Order D24 Sultan from Dukrian</h2>
           <p>
             Rediscover the classic that started it all. Available alongside{' '}
@@ -213,15 +214,15 @@ export default function D24SultanPage() {
             <Link to="/#shop">online shop</Link>.
           </p>
           <div className="seo-page__actions">
-            <Link to="/#shop" className="btn btn--primary">Shop D24 Sultan</Link>
-            <a
-              className="btn btn--ghost"
+            <BtnLink to="/#shop">Shop D24 Sultan</BtnLink>
+            <BtnLink
+              variant="ghost"
               href={`https://wa.me/${SITE.whatsappE164}`}
               target="_blank"
               rel="noreferrer"
             >
               WhatsApp Us
-            </a>
+            </BtnLink>
           </div>
         </section>
       </article>

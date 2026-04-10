@@ -1,3 +1,4 @@
+import { useCallback } from 'react'
 import { ChevronDown, MessageCircle } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
 import { navLinks, headerQuickLinks, seoPageLinks } from '../../content/siteContent'
@@ -11,10 +12,25 @@ export function Header() {
   const location = useLocation()
   const isHome = location.pathname === '/'
 
+  const handleLogoClick = useCallback(
+    (e: React.MouseEvent) => {
+      if (isHome) {
+        e.preventDefault()
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+    },
+    [isHome],
+  )
+
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <Link className="site-logo site-logo--text" to="/" aria-label={`${SITE.name} ${SITE.nameCn}`}>
+        <Link
+          className="site-logo site-logo--text"
+          to="/"
+          aria-label={`${SITE.name} ${SITE.nameCn}`}
+          onClick={handleLogoClick}
+        >
           <BrandMark variant="header" />
         </Link>
 

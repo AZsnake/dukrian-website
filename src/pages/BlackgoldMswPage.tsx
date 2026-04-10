@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { SEOHead } from '../components/seo/SEOHead'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
+import { BtnLink } from '../components/BtnLink'
 import { SITE } from '../config'
 
 export default function BlackgoldMswPage() {
@@ -27,7 +28,7 @@ export default function BlackgoldMswPage() {
               availability: 'https://schema.org/InStock',
               seller: { '@type': 'Organization', name: 'Dukrian' },
             },
-            image: `${SITE.origin}/images/dukrian/1.png`,
+            image: `${SITE.origin}/images/dukrian/1.webp`,
           },
           {
             '@context': 'https://schema.org',
@@ -73,7 +74,7 @@ export default function BlackgoldMswPage() {
           </p>
         </header>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>What Makes Blackgold MSW Special?</h2>
           <p>
             Among durian connoisseurs in Singapore and Malaysia, <strong>Blackgold MSW</strong> (also written
@@ -89,7 +90,7 @@ export default function BlackgoldMswPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Where Does Blackgold MSW Come From?</h2>
           <p>
             The best Blackgold MSW is sourced from <strong>Pahang Highlands</strong> in Peninsular Malaysia,
@@ -109,7 +110,7 @@ export default function BlackgoldMswPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Blackgold MSW Flavour Profile</h2>
           <p>
             What sets Blackgold apart from standard Musang King is its layered flavour profile:
@@ -137,7 +138,7 @@ export default function BlackgoldMswPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>How We Deliver Blackgold MSW Fresh</h2>
           <p>
             Freshness is non-negotiable when it comes to premium durian. Our farm-to-table process ensures
@@ -158,7 +159,7 @@ export default function BlackgoldMswPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Blackgold MSW Pricing at Dukrian</h2>
           <div className="seo-page__price-cards">
             <div className="seo-page__price-card">
@@ -178,7 +179,7 @@ export default function BlackgoldMswPage() {
           </p>
         </section>
 
-        <section className="seo-page__section seo-page__section--faq">
+        <section className="seo-page__section reveal seo-page__section--faq">
           <h2>Frequently Asked Questions: Blackgold MSW</h2>
 
           <details className="seo-faq">
@@ -230,7 +231,7 @@ export default function BlackgoldMswPage() {
           </details>
         </section>
 
-        <section className="seo-page__section seo-page__cta-section">
+        <section className="seo-page__section reveal seo-page__cta-section">
           <h2>Order Blackgold MSW from Dukrian Today</h2>
           <p>
             Experience the king of durians delivered fresh to your Singapore address. Browse our full
@@ -239,15 +240,15 @@ export default function BlackgoldMswPage() {
             <Link to="/durian-bundles">party bundles</Link>.
           </p>
           <div className="seo-page__actions">
-            <Link to="/#shop" className="btn btn--primary">Shop Blackgold MSW</Link>
-            <a
-              className="btn btn--ghost"
+            <BtnLink to="/#shop">Shop Blackgold MSW</BtnLink>
+            <BtnLink
+              variant="ghost"
               href={`https://wa.me/${SITE.whatsappE164}`}
               target="_blank"
               rel="noreferrer"
             >
               WhatsApp Us
-            </a>
+            </BtnLink>
           </div>
         </section>
       </article>

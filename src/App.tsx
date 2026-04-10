@@ -7,6 +7,8 @@ import { Header } from './components/layout/Header'
 import { Footer } from './components/layout/Footer'
 import { ShopSection } from './components/ShopSection'
 import { Cart } from './components/Cart'
+import { Loader } from './components/Loader'
+import { BtnLink } from './components/BtnLink'
 import { SEOHead } from './components/seo/SEOHead'
 import { SITE } from './config'
 import { orderHowCards } from './content/siteContent'
@@ -52,7 +54,6 @@ export default function App() {
   }, [reducedMotion])
   const pointerRef = useRef({ x: 0, y: 0 })
   const [assetsLoading, setAssetsLoading] = useState(true)
-  const [slowHint, setSlowHint] = useState(false)
 
   useEffect(() => {
     let raf = 0
@@ -84,10 +85,6 @@ export default function App() {
     [progressRef, reducedMotion, reducedMotionRef, pointerRef],
   )
 
-  useEffect(() => {
-    const id = window.setTimeout(() => setSlowHint(true), 10_000)
-    return () => window.clearTimeout(id)
-  }, [])
 
   return (
     <CartProvider>
@@ -130,18 +127,7 @@ export default function App() {
             <DurianCanvas onLoadProgress={onLoadProgress} />
           </Suspense>
 
-          {assetsLoading && (
-            <div className="load-overlay" role="status" aria-live="polite" aria-busy="true">
-              <div className="load-overlay__spinner" />
-              <p className="load-overlay__text">Loading scene…</p>
-              {slowHint && (
-                <p className="load-overlay__hint">
-                  If this takes long, add <code>durian-compressed.glb</code> under{' '}
-                  <code>web/public/models/</code>, or check the network tab.
-                </p>
-              )}
-            </div>
-          )}
+          {assetsLoading && <Loader overlay />}
 
           <div className="content-layer">
             <Header />
@@ -150,21 +136,17 @@ export default function App() {
               {/* ── Hero ─────────────────────────────────── */}
               <section className="hero" aria-labelledby="hero-title">
                 <div className="hero__inner">
-                  <p className="eyebrow">Serangoon Garden · Singapore 🇸🇬</p>
+                  <p className="eyebrow">Serangoon Garden · Singapore</p>
                   <h1 id="hero-title" className="hero__title">
                     {SITE.tagline}
                     <span className="hero__title-sub">{SITE.subtitle}</span>
                   </h1>
                   <p className="hero__lede">{SITE.description}</p>
                   <div className="hero__actions">
-                    <a className="btn btn--primary" href="#shop">
-                      Shop &amp; checkout
-                    </a>
-                    <a className="btn btn--ghost" href="#channels">
-                      How to order
-                    </a>
+                    <BtnLink href="#shop">Shop &amp; checkout</BtnLink>
+                    <BtnLink variant="ghost" href="#channels">How to order</BtnLink>
                   </div>
-                  <p className="hero__scroll-hint">Scroll to explore — the hero durian follows your pointer.</p>
+                  <p className="hero__scroll-hint">Scroll to explore — the 3D durian follows your pointer.</p>
                 </div>
               </section>
 
@@ -172,7 +154,7 @@ export default function App() {
               <ShopSection />
 
               {/* ── Delivery & location ─────────────────── */}
-              <section className="section section--tint" id="delivery">
+              <section className="section section--tint reveal" id="delivery">
                 <div className="section__inner section__inner--split">
                   <div>
                     <h2 className="section__title">From Malaysian farms to your table</h2>
@@ -185,18 +167,18 @@ export default function App() {
                       Operating daily {SITE.hours.toLowerCase()}. {SITE.deliveryWindow}. {SITE.sameDayCutoff}{' '}
                       {SITE.freeDeliveryNote}
                     </p>
-                    <a
-                      className="btn btn--ghost"
+                    <BtnLink
+                      variant="ghost"
                       href={`https://wa.me/${SITE.whatsappE164}`}
                       target="_blank"
                       rel="noreferrer"
                     >
                       WhatsApp +65 {SITE.whatsappDisplay} →
-                    </a>
+                    </BtnLink>
                   </div>
                   <div className="about-img-wrap">
                     <img
-                      src="/images/dukrian/8.png"
+                      src="/images/dukrian/8.webp"
                       alt="Premium durian flesh ready to enjoy"
                       loading="lazy"
                       className="about-img"
@@ -206,7 +188,7 @@ export default function App() {
               </section>
 
               {/* ── Order channels ───────────────────────── */}
-              <section className="section" id="channels">
+              <section className="section reveal" id="channels">
                 <div className="section__inner">
                   <h2 className="section__title">How to order on Dukrian</h2>
                   <p className="section__prose section__prose--tight">
@@ -228,7 +210,7 @@ export default function App() {
               </section>
 
               {/* ── Why Dukrian ─────────────────────────── */}
-              <section className="section section--tint" id="why">
+              <section className="section section--tint reveal" id="why">
                 <div className="section__inner">
                   <h2 className="section__title">
                     Why Dukrian <Sparkles size={18} className="section__stars" aria-hidden />

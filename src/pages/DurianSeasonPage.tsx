@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { SEOHead } from '../components/seo/SEOHead'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
+import { BtnLink } from '../components/BtnLink'
 import { SITE } from '../config'
 
 export default function DurianSeasonPage() {
@@ -47,7 +48,7 @@ export default function DurianSeasonPage() {
           </p>
         </header>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>When Is Durian Season in Singapore?</h2>
           <p>
             Singapore doesn't grow commercial durians — our supply comes almost entirely from
@@ -72,7 +73,7 @@ export default function DurianSeasonPage() {
           </ul>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>2026 Durian Season Calendar</h2>
           <p>
             Based on weather patterns and our plantation partners' forecasts, here's what to expect
@@ -109,7 +110,7 @@ export default function DurianSeasonPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>How Weather Affects Durian Season</h2>
           <p>
             Durian trees fruit in response to environmental triggers — specifically, a period of
@@ -138,7 +139,7 @@ export default function DurianSeasonPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Variety Availability by Season</h2>
           <p>
             Not all durian varieties are available at the same time. Here's a general guide:
@@ -167,7 +168,7 @@ export default function DurianSeasonPage() {
           </ul>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Tips for Buying Durian in Season</h2>
           <ol>
             <li>
@@ -193,7 +194,7 @@ export default function DurianSeasonPage() {
           </ol>
         </section>
 
-        <section className="seo-page__section seo-page__section--faq">
+        <section className="seo-page__section reveal seo-page__section--faq">
           <h2>Frequently Asked Questions: Durian Season</h2>
 
           <details className="seo-faq">
@@ -239,22 +240,22 @@ export default function DurianSeasonPage() {
           </details>
         </section>
 
-        <section className="seo-page__section seo-page__cta-section">
+        <section className="seo-page__section reveal seo-page__cta-section">
           <h2>Stay Updated on Durian Season 2026</h2>
           <p>
             Join our WhatsApp broadcast to receive daily updates on fresh arrivals, seasonal
             varieties, and <Link to="/durian-deals">special deals</Link> throughout the season.
           </p>
           <div className="seo-page__actions">
-            <Link to="/#shop" className="btn btn--primary">Shop When In Season</Link>
-            <a
-              className="btn btn--ghost"
+            <BtnLink to="/#shop">Shop When In Season</BtnLink>
+            <BtnLink
+              variant="ghost"
               href={`https://wa.me/${SITE.whatsappE164}?text=${encodeURIComponent('Hi Dukrian! Please add me to your season updates broadcast.')}`}
               target="_blank"
               rel="noreferrer"
             >
               Get Season Alerts
-            </a>
+            </BtnLink>
           </div>
         </section>
       </article>

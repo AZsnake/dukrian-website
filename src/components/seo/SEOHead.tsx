@@ -19,7 +19,7 @@ export function SEOHead({
   title,
   description,
   path,
-  ogImage = '/images/dukrian/og-default.jpg',
+  ogImage = '/images/dukrian/og-default.webp',
   ogType = 'website',
   article,
   jsonLd,

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { SEOHead } from '../components/seo/SEOHead'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
+import { BtnLink } from '../components/BtnLink'
 import { SITE } from '../config'
 
 export default function BestDurianVarietiesPage() {
@@ -58,7 +59,7 @@ export default function BestDurianVarietiesPage() {
           </p>
         </header>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Understanding Durian Names and Varieties</h2>
           <p>
             There are over <strong>200 registered durian varieties</strong> (known as "clones") in Malaysia's
@@ -73,7 +74,7 @@ export default function BestDurianVarietiesPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>The Top Durian Varieties in Singapore</h2>
 
           <h3>1. Musang King / MSW / Mao Shan Wang (猫山王) — D197</h3>
@@ -172,7 +173,7 @@ export default function BestDurianVarietiesPage() {
           </ul>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Quick Comparison: Top Durian Varieties</h2>
           <div className="seo-page__comparison">
             <table className="seo-table">
@@ -198,7 +199,7 @@ export default function BestDurianVarietiesPage() {
           </div>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Which Durian Should You Try First?</h2>
 
           <h3>If you're a first-timer</h3>
@@ -231,7 +232,7 @@ export default function BestDurianVarietiesPage() {
           </p>
         </section>
 
-        <section className="seo-page__section seo-page__section--faq">
+        <section className="seo-page__section reveal seo-page__section--faq">
           <h2>Frequently Asked Questions: Durian Varieties</h2>
 
           <details className="seo-faq">
@@ -280,7 +281,7 @@ export default function BestDurianVarietiesPage() {
           </details>
         </section>
 
-        <section className="seo-page__section seo-page__cta-section">
+        <section className="seo-page__section reveal seo-page__cta-section">
           <h2>Try Singapore's Best Durian Varieties at Dukrian</h2>
           <p>
             From flagship <Link to="/blackgold-msw">Blackgold MSW</Link> to classic{' '}
@@ -288,15 +289,15 @@ export default function BestDurianVarietiesPage() {
             with <Link to="/same-day-durian-delivery">same-day delivery</Link> across Singapore.
           </p>
           <div className="seo-page__actions">
-            <Link to="/#shop" className="btn btn--primary">Shop All Varieties</Link>
-            <a
-              className="btn btn--ghost"
+            <BtnLink to="/#shop">Shop All Varieties</BtnLink>
+            <BtnLink
+              variant="ghost"
               href={`https://wa.me/${SITE.whatsappE164}?text=${encodeURIComponent('Hi Dukrian! What varieties do you have today?')}`}
               target="_blank"
               rel="noreferrer"
             >
               Check Today's Stock
-            </a>
+            </BtnLink>
           </div>
         </section>
       </article>

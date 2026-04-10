@@ -25,20 +25,20 @@ export type OrderHowCard = {
   image: string
 }
 
-/** Brand photos: `public/images/dukrian/1.png` … `8.png`. */
+/** Brand photos: `public/images/dukrian/1.webp` … `8.webp`. */
 const img = {
-  p1: '/images/dukrian/1.png',
-  p2: '/images/dukrian/2.png',
-  p3: '/images/dukrian/3.png',
-  p4: '/images/dukrian/4.png',
-  p5: '/images/dukrian/5.png',
-  p6: '/images/dukrian/6.png',
-  p7: '/images/dukrian/7.png',
-  p8: '/images/dukrian/8.png',
+  p1: '/images/dukrian/1.webp',
+  p2: '/images/dukrian/2.webp',
+  p3: '/images/dukrian/3.webp',
+  p4: '/images/dukrian/4.webp',
+  p5: '/images/dukrian/5.webp',
+  p6: '/images/dukrian/6.webp',
+  p7: '/images/dukrian/7.webp',
+  p8: '/images/dukrian/8.webp',
   /** #channels cards — stock photos (Pexels, free use). */
-  channelShop: '/images/dukrian/channel-shop.jpg',
-  channelDelivery: '/images/dukrian/channel-delivery.jpg',
-  channelWhatsapp: '/images/dukrian/channel-whatsapp.jpg',
+  channelShop: '/images/dukrian/channel-shop.webp',
+  channelDelivery: '/images/dukrian/channel-delivery.webp',
+  channelWhatsapp: '/images/dukrian/channel-whatsapp.webp',
 } as const
 
 function waProduct(name: string) {

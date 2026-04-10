@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { SEOHead } from '../components/seo/SEOHead'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
+import { BtnLink } from '../components/BtnLink'
 import { SITE } from '../config'
 
 export default function BigDuriansPage() {
@@ -47,7 +48,7 @@ export default function BigDuriansPage() {
           </p>
         </header>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Why Size Matters with Durian</h2>
           <p>
             When you're paying premium prices for <Link to="/blackgold-msw">Blackgold MSW</Link> or
@@ -64,7 +65,7 @@ export default function BigDuriansPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Our Portion Sizes</h2>
           <div className="seo-page__price-cards">
             <div className="seo-page__price-card">
@@ -94,7 +95,7 @@ export default function BigDuriansPage() {
           </div>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>How We Select for Big, Quality Fruit</h2>
           <p>
             Not all durians are equal in size — fruit from older trees, higher elevations, and optimal
@@ -124,7 +125,7 @@ export default function BigDuriansPage() {
           </ul>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>What Determines Durian Size?</h2>
           <p>
             Several factors influence how big a durian grows:
@@ -159,7 +160,7 @@ export default function BigDuriansPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Getting the Most Durian for Your Money</h2>
           <ol>
             <li>
@@ -185,7 +186,7 @@ export default function BigDuriansPage() {
           </ol>
         </section>
 
-        <section className="seo-page__section seo-page__section--faq">
+        <section className="seo-page__section reveal seo-page__section--faq">
           <h2>Frequently Asked Questions: Big Durians</h2>
 
           <details className="seo-faq">
@@ -225,21 +226,21 @@ export default function BigDuriansPage() {
           </details>
         </section>
 
-        <section className="seo-page__section seo-page__cta-section">
+        <section className="seo-page__section reveal seo-page__cta-section">
           <h2>Order Generous Durian Portions</h2>
           <p>
             Experience the Dukrian difference — where the box always feels a little heavier than expected.
           </p>
           <div className="seo-page__actions">
-            <Link to="/#shop" className="btn btn--primary">Shop Big Portions</Link>
-            <a
-              className="btn btn--ghost"
+            <BtnLink to="/#shop">Shop Big Portions</BtnLink>
+            <BtnLink
+              variant="ghost"
               href={`https://wa.me/${SITE.whatsappE164}`}
               target="_blank"
               rel="noreferrer"
             >
               Ask About XL Portions
-            </a>
+            </BtnLink>
           </div>
         </section>
       </article>

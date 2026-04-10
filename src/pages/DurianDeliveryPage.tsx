@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { SEOHead } from '../components/seo/SEOHead'
 import { Breadcrumbs } from '../components/seo/Breadcrumbs'
+import { BtnLink } from '../components/BtnLink'
 import { SITE } from '../config'
 
 export default function DurianDeliveryPage() {
@@ -62,7 +63,7 @@ export default function DurianDeliveryPage() {
           </p>
         </header>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>How Our Delivery Works</h2>
           <p>
             At <strong>Dukrian ({SITE.nameCn})</strong>, freshness drives every step of our delivery
@@ -92,7 +93,7 @@ export default function DurianDeliveryPage() {
           </ol>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Delivery Coverage and Timing</h2>
 
           <h3>Island-Wide Delivery</h3>
@@ -121,7 +122,7 @@ export default function DurianDeliveryPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Delivery Fees and Free Delivery</h2>
           <div className="seo-page__price-cards">
             <div className="seo-page__price-card">
@@ -147,7 +148,7 @@ export default function DurianDeliveryPage() {
           </p>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>How We Keep Your Durian Fresh During Delivery</h2>
           <p>
             Durian is a perishable fruit — once de-husked, the clock is ticking. Our delivery protocol
@@ -173,7 +174,7 @@ export default function DurianDeliveryPage() {
           </ul>
         </section>
 
-        <section className="seo-page__section">
+        <section className="seo-page__section reveal">
           <h2>Our Satisfaction Promise</h2>
           <p>
             We stand behind every delivery with our <strong>eat/baojiak promise</strong>: if the durian
@@ -187,7 +188,7 @@ export default function DurianDeliveryPage() {
           </p>
         </section>
 
-        <section className="seo-page__section seo-page__section--faq">
+        <section className="seo-page__section reveal seo-page__section--faq">
           <h2>Frequently Asked Questions: Durian Delivery</h2>
 
           <details className="seo-faq">
@@ -234,22 +235,22 @@ export default function DurianDeliveryPage() {
           </details>
         </section>
 
-        <section className="seo-page__section seo-page__cta-section">
+        <section className="seo-page__section reveal seo-page__cta-section">
           <h2>Order Fresh Durian Delivery Today</h2>
           <p>
             Shop our full range of <Link to="/blackgold-msw">Blackgold MSW</Link>,{' '}
             <Link to="/d24-sultan">D24 Sultan</Link>, and more. Free delivery on qualifying orders.
           </p>
           <div className="seo-page__actions">
-            <Link to="/#shop" className="btn btn--primary">Shop & Get Delivery</Link>
-            <a
-              className="btn btn--ghost"
+            <BtnLink to="/#shop">Shop &amp; Get Delivery</BtnLink>
+            <BtnLink
+              variant="ghost"
               href={`https://wa.me/${SITE.whatsappE164}`}
               target="_blank"
               rel="noreferrer"
             >
               WhatsApp for Delivery Questions
-            </a>
+            </BtnLink>
           </div>
         </section>
       </article>

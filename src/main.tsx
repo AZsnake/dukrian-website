@@ -3,8 +3,10 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
+import { initScrollReveal } from './lib/scrollReveal'
 import App from './App.tsx'
 import { PageLayout } from './components/layout/PageLayout.tsx'
+import { Loader } from './components/Loader.tsx'
 
 const BlackgoldMswPage = lazy(() => import('./pages/BlackgoldMswPage'))
 const D24SultanPage = lazy(() => import('./pages/D24SultanPage'))
@@ -20,12 +22,14 @@ const BestDurianVarietiesPage = lazy(() => import('./pages/BestDurianVarietiesPa
 function ContentPage({ children }: { children: React.ReactNode }) {
   return (
     <PageLayout>
-      <Suspense fallback={<div className="page-loading">Loading…</div>}>
+      <Suspense fallback={<div className="page-loading"><Loader /></div>}>
         {children}
       </Suspense>
     </PageLayout>
   )
 }
+
+initScrollReveal()
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
