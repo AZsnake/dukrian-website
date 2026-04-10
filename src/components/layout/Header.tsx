@@ -1,5 +1,6 @@
 import { ChevronDown, MessageCircle } from 'lucide-react'
-import { navLinks, headerQuickLinks } from '../../content/siteContent'
+import { Link, useLocation } from 'react-router-dom'
+import { navLinks, headerQuickLinks, seoPageLinks } from '../../content/siteContent'
 import { SITE } from '../../config'
 import { BrandMark } from '../BrandMark'
 import { useCartActions, useCartState } from '../../CartContext'
@@ -7,36 +8,39 @@ import { useCartActions, useCartState } from '../../CartContext'
 export function Header() {
   const { itemCount } = useCartState()
   const { openCart } = useCartActions()
+  const location = useLocation()
+  const isHome = location.pathname === '/'
 
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <a className="site-logo site-logo--text" href="#top" aria-label={`${SITE.name} ${SITE.nameCn}`}>
+        <Link className="site-logo site-logo--text" to="/" aria-label={`${SITE.name} ${SITE.nameCn}`}>
           <BrandMark variant="header" />
-        </a>
+        </Link>
 
         <nav className="site-nav" aria-label="Primary">
           <ul>
             <li>
-              <a href="#shop">Shop</a>
+              {isHome ? <a href="#shop">Shop</a> : <Link to="/#shop">Shop</Link>}
             </li>
             {navLinks.map((l) => (
               <li key={l.href}>
-                <a href={l.href}>
-                  {l.label}
-                </a>
+                {isHome ? <a href={l.href}>{l.label}</a> : <Link to={`/${l.href}`}>{l.label}</Link>}
               </li>
             ))}
             <li className="site-nav__shop">
               <span className="site-nav__shop-label">
-                Quick links <ChevronDown size={13} aria-hidden style={{ verticalAlign: 'middle' }} />
+                Guides <ChevronDown size={13} aria-hidden style={{ verticalAlign: 'middle' }} />
               </span>
               <ul className="site-nav__sub">
-                {headerQuickLinks.map((l) => (
+                {seoPageLinks.slice(0, 6).map((l) => (
+                  <li key={l.href}>
+                    <Link to={l.href}>{l.label}</Link>
+                  </li>
+                ))}
+                {headerQuickLinks.filter(l => l.external).map((l) => (
                   <li key={l.href + l.label}>
-                    <a href={l.href} {...(l.external ? { target: '_blank', rel: 'noreferrer' } : {})}>
-                      {l.label}
-                    </a>
+                    <a href={l.href} target="_blank" rel="noreferrer">{l.label}</a>
                   </li>
                 ))}
               </ul>

@@ -7,6 +7,7 @@ import { Header } from './components/layout/Header'
 import { Footer } from './components/layout/Footer'
 import { ShopSection } from './components/ShopSection'
 import { Cart } from './components/Cart'
+import { SEOHead } from './components/seo/SEOHead'
 import { SITE } from './config'
 import { orderHowCards } from './content/siteContent'
 import './index.css'
@@ -90,6 +91,39 @@ export default function App() {
 
   return (
     <CartProvider>
+      <SEOHead
+        title={`${SITE.name} ${SITE.nameCn} | Fresh MSW Durian Delivery Singapore`}
+        description="Dukrian 有家榴莲 — premium Pahang Highland Blackgold MSW durian delivered fresh across Singapore from Serangoon Garden. Same-day delivery, D24 Sultan, durian bundles & deals. Order online or WhatsApp 8483 8466."
+        path="/"
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: `${SITE.name} ${SITE.nameCn}`,
+            url: SITE.origin,
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: `${SITE.origin}/#shop?q={search_term_string}`,
+              'query-input': 'required name=search_term_string',
+            },
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: `${SITE.name} ${SITE.nameCn}`,
+            url: SITE.origin,
+            logo: `${SITE.origin}/favicon.png`,
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: `+${SITE.whatsappE164}`,
+              contactType: 'customer service',
+              areaServed: 'SG',
+              availableLanguage: ['English', 'Chinese'],
+            },
+            sameAs: [SITE.instagramUrl, SITE.tiktokUrl, SITE.facebookUrl],
+          },
+        ]}
+      />
       <ScrollSceneContext.Provider value={scrollSceneValue}>
         <div className="app" id="top">
           <Suspense fallback={<div className="durian-canvas durian-canvas--shell" aria-hidden />}>

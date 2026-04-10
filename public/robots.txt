@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://dukrian.renthub.cloud/sitemap.xml
+
+# Disallow build artifacts and internal paths
+Disallow: /assets/
+Disallow: /models/
+
+# Crawl-delay suggestion for polite crawling
+Crawl-delay: 1

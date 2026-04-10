@@ -1741,3 +1741,367 @@ a.icon-btn {
   font-weight: 500;
 }
 
+/* ─────────────────────────────────────────────
+   Footer 4-column grid for SEO links
+───────────────────────────────────────────── */
+
+@media (min-width: 720px) {
+  .site-footer__grid--4col {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Page Layout for content pages
+───────────────────────────────────────────── */
+
+.content-layer--page {
+  background: #07090c;
+}
+
+.page-main {
+  padding-bottom: 4rem;
+}
+
+.page-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* ─────────────────────────────────────────────
+   Breadcrumbs
+───────────────────────────────────────────── */
+
+.breadcrumbs {
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumbs__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.breadcrumbs__list li + li::before {
+  content: '›';
+  margin-right: 0.35rem;
+}
+
+.breadcrumbs__list a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.breadcrumbs__list a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs__list span[aria-current] {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ─────────────────────────────────────────────
+   SEO Content Pages
+───────────────────────────────────────────── */
+
+.seo-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.seo-page__hero {
+  padding: 2rem 0 2.5rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2.5rem;
+}
+
+.seo-page__hero h1 {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.15;
+  color: #fff;
+}
+
+.seo-page__subtitle {
+  margin: 0;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 60ch;
+  line-height: 1.6;
+}
+
+.seo-page__section {
+  margin-bottom: 3rem;
+}
+
+.seo-page__section h2 {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  font-weight: 500;
+  color: #fff;
+}
+
+.seo-page__section h3 {
+  margin: 1.5rem 0 0.65rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cream);
+}
+
+.seo-page__section p {
+  margin: 0 0 1rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.65;
+}
+
+.seo-page__section ul,
+.seo-page__section ol {
+  margin: 0 0 1.25rem;
+  padding-left: 1.5rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.65;
+}
+
+.seo-page__section li {
+  margin-bottom: 0.5rem;
+}
+
+.seo-page__section a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.seo-page__section a:hover {
+  text-decoration: underline;
+}
+
+/* ── Price cards ── */
+
+.seo-page__price-cards {
+  display: grid;
+  gap: 1rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .seo-page__price-cards {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+.seo-page__price-card {
+  background: rgba(10, 12, 16, 0.88);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.seo-page__price-card:hover {
+  border-color: rgba(248, 199, 79, 0.35);
+}
+
+.seo-page__price-card--highlight {
+  border-color: rgba(248, 199, 79, 0.25);
+  background: rgba(248, 199, 79, 0.04);
+}
+
+.seo-page__price-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.seo-page__price-card p {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.seo-page__price {
+  font-size: 1.35rem !important;
+  font-weight: 700;
+  color: var(--orange) !important;
+}
+
+/* ── Tables ── */
+
+.seo-page__comparison {
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.seo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  min-width: 480px;
+}
+
+.seo-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background: rgba(248, 199, 79, 0.08);
+  color: var(--cream);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--line);
+}
+
+.seo-table td {
+  padding: 0.65rem 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.seo-table tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ── FAQ ── */
+
+.seo-page__section--faq {
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.seo-faq {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+  background: rgba(10, 12, 16, 0.6);
+  overflow: hidden;
+}
+
+.seo-faq summary {
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: color 0.15s;
+}
+
+.seo-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.seo-faq summary::before {
+  content: '+';
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: rgba(248, 199, 79, 0.12);
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+.seo-faq[open] summary::before {
+  content: '−';
+}
+
+.seo-faq summary:hover {
+  color: var(--gold);
+}
+
+.seo-faq > p,
+.seo-faq > div {
+  padding: 0 1.25rem 1.25rem 3.25rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+.seo-faq a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.seo-faq a:hover {
+  text-decoration: underline;
+}
+
+/* ── Timeline ── */
+
+.seo-page__timeline {
+  display: grid;
+  gap: 0;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.seo-page__timeline-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.seo-page__timeline-item:last-child {
+  border-bottom: none;
+}
+
+.seo-page__timeline-time {
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 0.88rem;
+  padding-top: 0.1rem;
+}
+
+.seo-page__timeline-item p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+/* ── CTA section ── */
+
+.seo-page__cta-section {
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(145deg, rgba(248, 199, 79, 0.08), rgba(252, 150, 61, 0.04));
+  border: 1px solid rgba(248, 199, 79, 0.2);
+  text-align: center;
+}
+
+.seo-page__cta-section h2 {
+  color: var(--cream);
+}
+
+.seo-page__cta-section p {
+  max-width: 50ch;
+  margin: 0 auto 1.5rem;
+}
+
+.seo-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+

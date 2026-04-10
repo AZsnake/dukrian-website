@@ -8,7 +8,7 @@ export const SITE = {
   subtitle: 'Within 12 Hours',
   description:
     'Premium Pahang Highland Blackgold Musang King (MSW) from trusted Malaysian plantations — de-husked, double-sealed, delivered fresh across Singapore from Serangoon Garden.',
-  origin: 'https://dukrian.com',
+  origin: 'https://dukrian.renthub.cloud',
   whatsappE164: '6584838466',
   whatsappDisplay: '8483 8466',
   address: '48 Crowhurst Drive, Singapore 557927',

@@ -1,16 +1,17 @@
 import { Clock, MapPin, Package, Phone } from 'lucide-react'
-import { socialLinks } from '../../content/siteContent'
+import { Link } from 'react-router-dom'
+import { socialLinks, seoPageLinks } from '../../content/siteContent'
 import { SITE } from '../../config'
 import { BrandMark } from '../BrandMark'
 
 export function Footer() {
   return (
     <footer className="site-footer" id="contact">
-      <div className="site-footer__grid">
+      <div className="site-footer__grid site-footer__grid--4col">
         <div className="site-footer__brand-col">
-          <a href="#top" className="site-footer__brand-link" aria-label={`${SITE.name} ${SITE.nameCn}`}>
+          <Link to="/" className="site-footer__brand-link" aria-label={`${SITE.name} ${SITE.nameCn}`}>
             <BrandMark variant="footer" />
-          </a>
+          </Link>
           <p className="site-footer__muted">{SITE.description}</p>
           <div className="site-footer__info-block">
             <span className="site-footer__info-row">
@@ -36,20 +37,38 @@ export function Footer() {
           <p className="site-footer__head">Order on Dukrian</p>
           <ul className="site-footer__links">
             <li>
-              <a className="site-footer__link" href="#shop">
+              <Link className="site-footer__link" to="/#shop">
                 Shop &amp; cart
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="site-footer__link" href="#delivery">
+              <Link className="site-footer__link" to="/durian-delivery">
                 Delivery &amp; pickup
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="site-footer__link" href="#channels">
-                How to order
-              </a>
+              <Link className="site-footer__link" to="/durian-deals">
+                Durian deals
+              </Link>
             </li>
+            <li>
+              <Link className="site-footer__link" to="/durian-bundles">
+                Bundles &amp; parties
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="site-footer__head">Guides</p>
+          <ul className="site-footer__links">
+            {seoPageLinks.map((l) => (
+              <li key={l.href}>
+                <Link className="site-footer__link" to={l.href}>
+                  {l.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -65,12 +84,6 @@ export function Footer() {
             ))}
           </ul>
 
-          <p className="site-footer__head" style={{ marginTop: '1.5rem' }}>
-            Website
-          </p>
-          <a className="site-footer__link" href={`${SITE.origin}/`} target="_blank" rel="noreferrer">
-            dukrian.com
-          </a>
         </div>
       </div>
 

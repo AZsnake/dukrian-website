@@ -61,6 +61,20 @@ export const headerQuickLinks = [
   { label: 'WhatsApp', href: `https://wa.me/${SITE.whatsappE164}`, external: true },
 ] as const
 
+/** SEO content pages — guides and informational content. */
+export const seoPageLinks = [
+  { label: 'Blackgold MSW', href: '/blackgold-msw' },
+  { label: 'D24 Sultan', href: '/d24-sultan' },
+  { label: 'Durian Delivery', href: '/durian-delivery' },
+  { label: 'Same-Day Delivery', href: '/same-day-durian-delivery' },
+  { label: 'Durian Bundles', href: '/durian-bundles' },
+  { label: 'Durian Deals', href: '/durian-deals' },
+  { label: 'Durian Season', href: '/durian-season' },
+  { label: 'Big Durians', href: '/big-durians' },
+  { label: 'How to Pick Durian', href: '/how-to-find-ripe-good-durian' },
+  { label: 'Durian Varieties', href: '/best-durian-varieties' },
+] as const
+
 // ─── Products (illustrative catalogue — confirm live prices with the team) ──
 
 export const products: Product[] = [
