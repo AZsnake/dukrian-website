@@ -5,18 +5,12 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Preconnect to critical third-party origins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
     <link rel="dns-prefetch" href="https://analytics.tiktok.com" />
     <link rel="dns-prefetch" href="https://www.gstatic.com" />
 
-    <!-- Google Fonts (non-render-blocking) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Outfit:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Outfit:wght@400;500;600;700&display=swap" /></noscript>
-
-    <link rel="preload" href="/models/durian-compressed.glb" as="fetch" crossorigin="anonymous" />
+    <!-- 3D model: low priority so it does not compete with LCP / critical CSS+JS -->
+    <link rel="preload" href="/models/durian-compressed.glb" as="fetch" crossorigin="anonymous" fetchpriority="low" />
 
     <!-- Primary Meta Tags (OG/Twitter tags managed by react-helmet-async in SEOHead.tsx) -->
     <title>Dukrian 有家榴莲 | Fresh Blackgold MSW Durian Delivery Singapore</title>

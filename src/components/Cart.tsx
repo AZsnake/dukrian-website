@@ -17,7 +17,8 @@ export function Cart() {
       <aside
         className={`cart-drawer${open ? ' cart-drawer--open' : ''}`}
         aria-label="Shopping cart"
-        aria-hidden={!open}
+        aria-hidden={open ? undefined : true}
+        inert={!open ? true : undefined}
       >
         <div className="cart-drawer__header">
           <h2 className="cart-drawer__title">

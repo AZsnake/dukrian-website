@@ -33,7 +33,16 @@ export const ShopProductCard = memo(function ShopProductCard({ product }: Props)
           aria-label={`View ${product.name}`}
         >
           {product.badge && <span className="product-badge">{product.badge}</span>}
-          <img src={product.image} alt={product.name} loading="lazy" decoding="async" width={400} height={400} />
+          <img
+            src={product.image}
+            alt={product.name}
+            loading="lazy"
+            decoding="async"
+            width={400}
+            height={400}
+            sizes="(max-width: 639px) 50vw, (max-width: 999px) 33vw, 220px"
+            fetchPriority="low"
+          />
         </button>
         <div className="shop-card__body">
           <h3 className="shop-card__name">{product.name}</h3>

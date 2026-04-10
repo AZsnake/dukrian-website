@@ -36,7 +36,16 @@ const ExperienceCard = memo(function ExperienceCard({
       href={href}
       {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
     >
-      <img src={image} alt={title} loading="lazy" decoding="async" width={522} height={294} />
+      <img
+        src={image}
+        alt={title}
+        loading="lazy"
+        decoding="async"
+        width={522}
+        height={294}
+        sizes="(max-width: 719px) 100vw, (max-width: 1099px) 33vw, 360px"
+        fetchPriority="low"
+      />
       <div className="exp-card__body">
         <h3>{title}</h3>
         <p>{blurb}</p>
@@ -184,6 +193,8 @@ export default function App() {
                       decoding="async"
                       width={800}
                       height={450}
+                      sizes="(max-width: 879px) 100vw, 50vw"
+                      fetchPriority="low"
                       className="about-img"
                     />
                   </div>
