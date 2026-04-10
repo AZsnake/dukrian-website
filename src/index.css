@@ -169,9 +169,10 @@ code {
   min-height: 40vh;
 }
 
+/* Below .content-layer (z-index:1) so hero copy can paint for LCP; above .durian-canvas (z-index:0) */
 .loader--overlay {
   position: fixed;
-  z-index: 40;
+  z-index: 0;
   inset: 0;
   min-height: 0;
   background: radial-gradient(circle at 50% 40%, rgba(248, 199, 79, 0.06), #07090c 55%);
