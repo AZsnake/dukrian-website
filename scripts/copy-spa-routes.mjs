@@ -30,7 +30,10 @@ if (!fs.existsSync(indexHtml)) {
 
 const html = fs.readFileSync(indexHtml, 'utf8')
 for (const seg of SPA_ROUTE_SEGMENTS) {
-  const outFile = path.join(distDir, seg)
-  fs.writeFileSync(outFile, html)
+  const dir = path.join(distDir, seg)
+  fs.mkdirSync(dir, { recursive: true })
+  fs.writeFileSync(path.join(dir, 'index.html'), html)
 }
-console.log(`copy-spa-routes: wrote ${SPA_ROUTE_SEGMENTS.length} HTML shells alongside index.html`)
+console.log(
+  `copy-spa-routes: wrote ${SPA_ROUTE_SEGMENTS.length} route index.html shells (…/<route>/index.html)`,
+)

@@ -1,1 +1,13 @@
+# Trailing slash so CDN serves /<route>/index.html as text/html (extensionless keys become downloads).
+/blackgold-msw /blackgold-msw/ 301
+/d24-sultan            /d24-sultan/            301
+/durian-bundles        /durian-bundles/        301
+/durian-deals          /durian-deals/          301
+/durian-delivery       /durian-delivery/       301
+/same-day-durian-delivery /same-day-durian-delivery/ 301
+/durian-season         /durian-season/         301
+/big-durians           /big-durians/           301
+/how-to-find-ripe-good-durian /how-to-find-ripe-good-durian/ 301
+/best-durian-varieties /best-durian-varieties/ 301
+
 /*    /index.html   200

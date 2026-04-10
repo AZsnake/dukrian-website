@@ -1,6 +1,6 @@
-import { StrictMode, lazy, Suspense } from 'react'
+import { StrictMode, lazy, Suspense, useLayoutEffect } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import '@fontsource-variable/fraunces/opsz.css'
 import '@fontsource-variable/fraunces/opsz-italic.css'
@@ -32,12 +32,28 @@ function ContentPage({ children }: { children: React.ReactNode }) {
   )
 }
 
+/** Static hosts serve deep links as /route/index.html; normalize to /route for <Route path="/route">. */
+function NormalizeTrailingSlash() {
+  const { pathname, search, hash } = useLocation()
+  const navigate = useNavigate()
+  useLayoutEffect(() => {
+    if (pathname.length > 1 && pathname.endsWith('/')) {
+      navigate(
+        { pathname: pathname.replace(/\/+$/, ''), search, hash },
+        { replace: true },
+      )
+    }
+  }, [pathname, search, hash, navigate])
+  return null
+}
+
 initScrollReveal()
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <HelmetProvider>
       <BrowserRouter>
+        <NormalizeTrailingSlash />
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/blackgold-msw" element={<ContentPage><BlackgoldMswPage /></ContentPage>} />
