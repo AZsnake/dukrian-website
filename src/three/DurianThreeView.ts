@@ -119,6 +119,8 @@ export class DurianThreeView {
     this.renderer.toneMappingExposure = 1
     this.renderer.sortObjects = false
 
+    this.renderer.domElement.tabIndex = -1
+    this.renderer.domElement.setAttribute('aria-hidden', 'true')
     this.container.appendChild(this.renderer.domElement)
 
     this.setupLights()

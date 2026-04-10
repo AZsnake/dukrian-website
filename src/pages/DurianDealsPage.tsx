@@ -9,7 +9,7 @@ export default function DurianDealsPage() {
     <>
       <SEOHead
         title="Durian Deals Singapore 2026 — Promotions & Discounts"
-        description="Find the best durian deals in Singapore at Dukrian. Seasonal promotions on Blackgold MSW, D24 Sultan, free upsize offers, bundle discounts, and free delivery. Updated for 2026 durian season."
+        description="Best durian deals in Singapore at Dukrian. Seasonal promos on Blackgold MSW, D24 Sultan, bundle discounts & free delivery. 2026 season."
         path="/durian-deals"
         ogType="article"
         article={{ publishedTime: '2025-03-01', modifiedTime: '2026-04-01' }}

@@ -9,7 +9,7 @@ export default function DurianBundlesPage() {
     <>
       <SEOHead
         title="Durian Bundles Singapore — Party Packs & Multi-Variety Sets"
-        description="Order durian bundles and party packs from Dukrian Singapore. Multi-variety tasting sets, corporate event packages, and family bundles featuring Blackgold MSW, D24 Sultan & more. Same-day delivery available."
+        description="Durian bundles & party packs from Dukrian Singapore. Tasting sets, corporate packages & family bundles with Blackgold MSW & D24 Sultan."
         path="/durian-bundles"
         ogType="article"
         article={{ publishedTime: '2025-02-01', modifiedTime: '2026-04-01' }}

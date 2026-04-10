@@ -24,5 +24,5 @@ export function DurianCanvas({ onLoadProgress }: Props) {
     return () => view.dispose()
   }, [onLoadProgress, progressRef, pointerRef, reducedMotionRef])
 
-  return <div ref={containerRef} className="durian-canvas" aria-hidden />
+  return <div ref={containerRef} className="durian-canvas" aria-hidden="true" />
 }

@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { lazy, Suspense, useState } from 'react'
 import { ShoppingCart } from 'lucide-react'
 import { formatPrice, SITE } from '../config'
 import { useCart } from '../CartContext'
 import { trackInitiateCheckout } from '../lib/metaPixel'
-import { CheckoutModal } from './CheckoutModal'
+
+const CheckoutModal = lazy(() => import('./CheckoutModal').then(m => ({ default: m.CheckoutModal })))
 
 export function Cart() {
   const { items, open, total, itemCount, removeItem, setQty, closeCart } = useCart()
@@ -43,7 +44,7 @@ export function Cart() {
             <ul className="cart-items" role="list">
               {items.map((item) => (
                 <li key={item.id} className="cart-item">
-                  <img src={item.image} alt={item.name} className="cart-item__img" loading="lazy" />
+                  <img src={item.image} alt={item.name} className="cart-item__img" loading="lazy" width={64} height={64} />
                   <div className="cart-item__info">
                     <p className="cart-item__name">{item.name}</p>
                     <p className="cart-item__price">{formatPrice(item.price)}</p>
@@ -104,15 +105,17 @@ export function Cart() {
       </aside>
 
       {checkoutOpen && (
-        <CheckoutModal
-          items={items}
-          total={total}
-          onClose={() => setCheckoutOpen(false)}
-          onSuccess={() => {
-            setCheckoutOpen(false)
-            closeCart()
-          }}
-        />
+        <Suspense fallback={null}>
+          <CheckoutModal
+            items={items}
+            total={total}
+            onClose={() => setCheckoutOpen(false)}
+            onSuccess={() => {
+              setCheckoutOpen(false)
+              closeCart()
+            }}
+          />
+        </Suspense>
       )}
     </>
   )

@@ -1,4 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Outfit:wght@400;500;600;700&display=swap');
+/* Size-adjusted fallback fonts to reduce CLS when web fonts load */
+@font-face {
+  font-family: 'Fraunces Fallback';
+  src: local('Georgia');
+  ascent-override: 95%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 105%;
+}
+
+@font-face {
+  font-family: 'Outfit Fallback';
+  src: local('system-ui'), local('Segoe UI'), local('sans-serif');
+  ascent-override: 100%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 100%;
+}
 
 :root {
   --gold: #f8c74f;
@@ -7,12 +24,12 @@
   --cream: #ffde94;
   --ink: #1a1d22;
   --ink-soft: #2e3138;
-  --muted: #6d7179;
+  --muted: #858993;
   --surface: rgba(12, 14, 18, 0.72);
   --surface-strong: rgba(8, 10, 14, 0.88);
   --line: rgba(255, 255, 255, 0.1);
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Outfit', system-ui, sans-serif;
+  --font-display: 'Fraunces', 'Fraunces Fallback', Georgia, serif;
+  --font-body: 'Outfit', 'Outfit Fallback', system-ui, sans-serif;
   --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.35);
   --radius: 14px;
   --radius-lg: 22px;
@@ -194,7 +211,7 @@ code {
   font-style: italic;
   font-size: 0.95rem;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
   animation: loader-text-fade 2.4s ease-in-out infinite;
 }
 
@@ -778,7 +795,7 @@ main {
   margin: 0;
   font-size: 0.92rem;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .site-footer__head {
@@ -787,7 +804,7 @@ main {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .site-footer__link {
@@ -825,7 +842,7 @@ main {
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.55);
   text-align: center;
 }
 
@@ -1047,6 +1064,7 @@ a.icon-btn {
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .shop-card:hover .shop-card__img-btn img {
@@ -1402,6 +1420,7 @@ a.icon-btn {
   transform: translateX(100%);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: -16px 0 48px rgba(0, 0, 0, 0.4);
+  will-change: transform;
 }
 
 .cart-drawer--open {
@@ -1807,7 +1826,7 @@ a.icon-btn {
   align-items: center;
   gap: 0.45rem;
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .site-footer__info-row + .site-footer__info-row {
@@ -1850,6 +1869,7 @@ a.icon-btn {
 .page-main {
   padding-bottom: 4rem;
   animation: page-enter 0.35s ease-out both;
+  will-change: opacity, transform;
 }
 
 @keyframes page-enter {
@@ -1860,6 +1880,12 @@ a.icon-btn {
   to {
     opacity: 1;
     transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-main {
+    animation: none;
   }
 }
 

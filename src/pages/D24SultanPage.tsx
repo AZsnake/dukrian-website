@@ -9,7 +9,7 @@ export default function D24SultanPage() {
     <>
       <SEOHead
         title="D24 Sultan Durian Singapore — Classic Buttery Durian"
-        description="Order D24 Sultan durian from Dukrian Singapore. Pale yellow, buttery and mildly bitter — a beloved classic. De-husked, fresh delivery across Singapore from Serangoon Garden."
+        description="D24 Sultan durian from Dukrian Singapore. Pale yellow, buttery & mildly bitter classic. De-husked, fresh same-day delivery from Serangoon Garden."
         path="/d24-sultan"
         ogType="article"
         article={{ publishedTime: '2025-01-15', modifiedTime: '2026-04-01' }}

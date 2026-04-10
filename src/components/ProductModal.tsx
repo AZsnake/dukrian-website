@@ -44,7 +44,7 @@ export function ProductModal({ product, onClose }: Props) {
         <div className="product-modal__layout">
           <div className="product-modal__media">
             <div className="product-modal__img-wrap">
-              <img src={product.image} alt={product.name} className="product-modal__img" />
+              <img src={product.image} alt={product.name} className="product-modal__img" width={410} height={410} />
               {product.badge && <span className="product-badge product-badge--lg">{product.badge}</span>}
             </div>
           </div>

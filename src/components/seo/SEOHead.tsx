@@ -19,7 +19,7 @@ export function SEOHead({
   title,
   description,
   path,
-  ogImage = '/images/dukrian/og-default.webp',
+  ogImage = '/images/dukrian/1.webp',
   ogType = 'website',
   article,
   jsonLd,
@@ -76,6 +76,7 @@ export function SEOHead({
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@Dukrainsg" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={absoluteOgImage} />

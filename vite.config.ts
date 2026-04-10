@@ -46,6 +46,7 @@ export default defineConfig({
         manualChunks(id) {
           if (id.includes('node_modules/three')) return 'three'
           if (id.includes('node_modules/lucide-react')) return 'icons'
+          if (id.includes('node_modules/react-helmet-async') || id.includes('node_modules/react-router-dom') || id.includes('node_modules/react-router')) return 'router'
         },
       },
     },

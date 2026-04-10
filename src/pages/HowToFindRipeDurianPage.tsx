@@ -9,7 +9,7 @@ export default function HowToFindRipeDurianPage() {
     <>
       <SEOHead
         title="How to Find Ripe & Good Durian — Expert Guide from Singapore"
-        description="Learn how to find ripe, good quality durian with expert tips from Dukrian Singapore. Visual cues, aroma test, sound test, stem check, and more. Pick the perfect Blackgold MSW, D24 Sultan every time."
+        description="How to find ripe durian: expert tips from Dukrian Singapore. Visual cues, aroma test, sound test & stem check for perfect Blackgold MSW & D24."
         path="/how-to-find-ripe-good-durian"
         ogType="article"
         article={{ publishedTime: '2025-01-25', modifiedTime: '2026-04-01', author: 'Dukrian Team' }}

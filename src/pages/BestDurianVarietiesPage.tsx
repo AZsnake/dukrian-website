@@ -9,7 +9,7 @@ export default function BestDurianVarietiesPage() {
     <>
       <SEOHead
         title="Best Durian Varieties in Singapore — Complete Name Guide"
-        description="Discover the best durian varieties and names in Singapore: Musang King (MSW), D24 Sultan, XO, Red Prawn, Tekka & more. Flavour profiles, prices, and expert recommendations from Dukrian."
+        description="Best durian varieties in Singapore: Musang King (MSW), D24 Sultan, XO, Red Prawn, Tekka & more. Flavour profiles, prices & tips from Dukrian."
         path="/best-durian-varieties"
         ogType="article"
         article={{ publishedTime: '2025-01-10', modifiedTime: '2026-04-01', author: 'Dukrian Team' }}

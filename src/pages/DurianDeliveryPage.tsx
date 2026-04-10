@@ -9,7 +9,7 @@ export default function DurianDeliveryPage() {
     <>
       <SEOHead
         title="Durian Delivery Singapore — Fresh Evening Delivery Island-Wide"
-        description="Fresh durian delivery across Singapore from Dukrian Serangoon Garden. Evening delivery 7–11 PM, free delivery from ~S$105. Blackgold MSW, D24 Sultan & more delivered de-husked and double-sealed."
+        description="Fresh durian delivery across Singapore from Dukrian Serangoon Garden. Evening delivery 7–11 PM, free from ~S$105. Blackgold MSW & D24 Sultan."
         path="/durian-delivery"
         ogType="article"
         article={{ publishedTime: '2025-01-20', modifiedTime: '2026-04-01' }}

@@ -9,7 +9,7 @@ export default function DurianSeasonPage() {
     <>
       <SEOHead
         title="Durian Season Singapore 2026 — When Is Durian Season?"
-        description="Complete guide to durian season in Singapore and Malaysia for 2026. Peak harvest months, best time to buy Blackgold MSW & D24 Sultan, seasonal pricing, and expert tips from Dukrian Serangoon Garden."
+        description="Guide to durian season in Singapore & Malaysia 2026. Peak harvest months, best time for Blackgold MSW & D24 Sultan, pricing tips from Dukrian."
         path="/durian-season"
         ogType="article"
         article={{ publishedTime: '2025-01-10', modifiedTime: '2026-04-01' }}

@@ -9,7 +9,7 @@ export default function BlackgoldMswPage() {
     <>
       <SEOHead
         title="Blackgold MSW Durian Singapore — Premium Musang King"
-        description="Discover Blackgold MSW (Musang King) durian at Dukrian Singapore. Rich, creamy Pahang Highland Blackgold with bittersweet depth. De-husked, double-sealed, delivered fresh same-day from Serangoon Garden."
+        description="Blackgold MSW (Musang King) durian at Dukrian Singapore. Rich, creamy Pahang Highland Blackgold. De-husked, double-sealed, same-day delivery."
         path="/blackgold-msw"
         ogType="article"
         article={{ publishedTime: '2025-01-15', modifiedTime: '2026-04-01' }}

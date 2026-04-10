@@ -90,7 +90,7 @@ export default function App() {
     <CartProvider>
       <SEOHead
         title={`${SITE.name} ${SITE.nameCn} | Fresh MSW Durian Delivery Singapore`}
-        description="Dukrian 有家榴莲 — premium Pahang Highland Blackgold MSW durian delivered fresh across Singapore from Serangoon Garden. Same-day delivery, D24 Sultan, durian bundles & deals. Order online or WhatsApp 8483 8466."
+        description="Premium Pahang Highland Blackgold MSW durian delivered fresh across Singapore from Serangoon Garden. Same-day delivery, D24 Sultan, bundles & deals."
         path="/"
         jsonLd={[
           {
@@ -181,6 +181,9 @@ export default function App() {
                       src="/images/dukrian/8.webp"
                       alt="Premium durian flesh ready to enjoy"
                       loading="lazy"
+                      decoding="async"
+                      width={800}
+                      height={450}
                       className="about-img"
                     />
                   </div>

@@ -9,7 +9,7 @@ export default function SameDayDeliveryPage() {
     <>
       <SEOHead
         title="Same Day Durian Delivery Singapore — Order by 6 PM"
-        description="Same-day durian delivery across Singapore from Dukrian. Order Blackgold MSW, D24 Sultan & more by 6 PM — delivered fresh 7–11 PM the same evening. De-husked, double-sealed, farm-to-table freshness."
+        description="Same-day durian delivery across Singapore from Dukrian. Order Blackgold MSW & D24 Sultan by 6 PM — delivered fresh 7–11 PM, de-husked & sealed."
         path="/same-day-durian-delivery"
         ogType="article"
         article={{ publishedTime: '2025-01-20', modifiedTime: '2026-04-01' }}

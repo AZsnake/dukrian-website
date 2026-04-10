@@ -1,9 +1,10 @@
-import { memo, useCallback, useState } from 'react'
+import { lazy, memo, Suspense, useCallback, useState } from 'react'
 import type { Product } from '../content/siteContent'
 import { formatPrice } from '../config'
 import { useCartActions } from '../CartContext'
 import { trackViewContent } from '../lib/metaPixel'
-import { ProductModal } from './ProductModal'
+
+const ProductModal = lazy(() => import('./ProductModal').then(m => ({ default: m.ProductModal })))
 
 type Props = {
   product: Product
@@ -32,7 +33,7 @@ export const ShopProductCard = memo(function ShopProductCard({ product }: Props)
           aria-label={`View ${product.name}`}
         >
           {product.badge && <span className="product-badge">{product.badge}</span>}
-          <img src={product.image} alt={product.name} loading="lazy" decoding="async" />
+          <img src={product.image} alt={product.name} loading="lazy" decoding="async" width={400} height={400} />
         </button>
         <div className="shop-card__body">
           <h3 className="shop-card__name">{product.name}</h3>
@@ -46,7 +47,7 @@ export const ShopProductCard = memo(function ShopProductCard({ product }: Props)
         </div>
       </article>
 
-      {detailOpen && <ProductModal product={product} onClose={closeDetail} />}
+      {detailOpen && <Suspense fallback={null}><ProductModal product={product} onClose={closeDetail} /></Suspense>}
     </>
   )
 })

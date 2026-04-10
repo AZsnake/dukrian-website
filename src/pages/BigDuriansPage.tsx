@@ -9,7 +9,7 @@ export default function BigDuriansPage() {
     <>
       <SEOHead
         title="Big Durians Singapore — Large Portions & Generous Boxes"
-        description="Order big durians and generous portion boxes from Dukrian Singapore. Our Blackgold MSW boxes often weigh above label. Free upsize promos, XL portions, and large party packs available."
+        description="Big durians & generous portions from Dukrian Singapore. Blackgold MSW boxes often above label weight. Free upsize promos & XL packs."
         path="/big-durians"
         ogType="article"
         article={{ publishedTime: '2025-02-15', modifiedTime: '2026-04-01' }}
