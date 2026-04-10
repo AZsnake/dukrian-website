@@ -4,8 +4,8 @@ import { fileURLToPath } from 'node:url'
 
 /**
  * S3-style hosts need a real object per URL. Each page is served as <segment>/index.html
- * (canonical URL: /<segment>/). Also writes 404.html — set the host’s custom404 page to
- * 404.html so wrong keys still return HTML (then React redirects no-trailing-slash → /…/).
+ * (canonical URL: /<segment>/). Writes 404.html — point the host custom 404 at it when possible.
+ * Root index.html includes an inline /slug→/slug/ redirect (keep slugs in sync with this list).
  * Keep SPA_ROUTE_SEGMENTS in sync with src/main.tsx.
  */
 const SPA_ROUTE_SEGMENTS = [

@@ -5,6 +5,23 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- /slug → /slug/ before React (same slugs as scripts/copy-spa-routes.mjs). Needs HTML response, not octet-stream. -->
+    <script>
+      (function () {
+        var p = location.pathname;
+        if (p.endsWith('/') || p.length <= 1) return;
+        var seg = p.slice(1).split('/')[0];
+        if (!seg || seg.indexOf('.') !== -1) return;
+        if (p !== '/' + seg) return;
+        var slugs =
+          'blackgold-msw d24-sultan durian-bundles durian-deals durian-delivery same-day-durian-delivery durian-season big-durians how-to-find-ripe-good-durian best-durian-varieties'.split(
+            ' ',
+          );
+        if (slugs.indexOf(seg) !== -1)
+          location.replace('/' + seg + '/' + location.search + location.hash);
+      })();
+    </script>
+
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
     <link rel="dns-prefetch" href="https://analytics.tiktok.com" />
     <link rel="dns-prefetch" href="https://www.gstatic.com" />

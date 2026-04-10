@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    { "source": "/blackgold-msw", "destination": "/blackgold-msw/", "permanent": true },
+    { "source": "/d24-sultan", "destination": "/d24-sultan/", "permanent": true },
+    { "source": "/durian-bundles", "destination": "/durian-bundles/", "permanent": true },
+    { "source": "/durian-deals", "destination": "/durian-deals/", "permanent": true },
+    { "source": "/durian-delivery", "destination": "/durian-delivery/", "permanent": true },
+    { "source": "/same-day-durian-delivery", "destination": "/same-day-durian-delivery/", "permanent": true },
+    { "source": "/durian-season", "destination": "/durian-season/", "permanent": true },
+    { "source": "/big-durians", "destination": "/big-durians/", "permanent": true },
+    { "source": "/how-to-find-ripe-good-durian", "destination": "/how-to-find-ripe-good-durian/", "permanent": true },
+    { "source": "/best-durian-varieties", "destination": "/best-durian-varieties/", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
