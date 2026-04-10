@@ -40,6 +40,3 @@ dist-ssr
 .prompts/
 AGENTS.md
 .claude*
-
-# Dev-only scripts
-scripts/
