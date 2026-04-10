@@ -3,8 +3,10 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 /**
- * Static buckets (S3-style) request an object per URL path. SPA deep links need a real
- * object at each route. Keep this list in sync with <Route path="…"> in src/main.tsx.
+ * S3-style hosts need a real object per URL. Each page is served as <segment>/index.html
+ * (canonical URL: /<segment>/). Also writes 404.html — set the host’s custom404 page to
+ * 404.html so wrong keys still return HTML (then React redirects no-trailing-slash → /…/).
+ * Keep SPA_ROUTE_SEGMENTS in sync with src/main.tsx.
  */
 const SPA_ROUTE_SEGMENTS = [
   'blackgold-msw',
@@ -34,6 +36,8 @@ for (const seg of SPA_ROUTE_SEGMENTS) {
   fs.mkdirSync(dir, { recursive: true })
   fs.writeFileSync(path.join(dir, 'index.html'), html)
 }
+fs.writeFileSync(path.join(distDir, '404.html'), html)
+
 console.log(
-  `copy-spa-routes: wrote ${SPA_ROUTE_SEGMENTS.length} route index.html shells (…/<route>/index.html)`,
+  `copy-spa-routes: ${SPA_ROUTE_SEGMENTS.length} route shells + 404.html (set host custom 404 → 404.html)`,
 )

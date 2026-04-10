@@ -10,7 +10,7 @@ export default function D24SultanPage() {
       <SEOHead
         title="D24 Sultan Durian Singapore — Classic Buttery Durian"
         description="D24 Sultan durian from Dukrian Singapore. Pale yellow, buttery & mildly bitter classic. De-husked, fresh same-day delivery from Serangoon Garden."
-        path="/d24-sultan"
+        path="/d24-sultan/"
         ogType="article"
         article={{ publishedTime: '2025-01-15', modifiedTime: '2026-04-01' }}
         jsonLd={[
@@ -54,7 +54,7 @@ export default function D24SultanPage() {
       />
 
       <article className="seo-page">
-        <Breadcrumbs items={[{ label: 'D24 Sultan', href: '/d24-sultan' }]} />
+        <Breadcrumbs items={[{ label: 'D24 Sultan', href: '/d24-sultan/' }]} />
 
         <header className="seo-page__hero">
           <h1>D24 Sultan Durian: The Classic Favourite in Singapore</h1>
@@ -73,7 +73,7 @@ export default function D24SultanPage() {
             quality that made it the benchmark for premium durian for decades.
           </p>
           <p>
-            While <Link to="/blackgold-msw">Blackgold MSW</Link> now commands the highest prices, D24
+            While <Link to="/blackgold-msw/">Blackgold MSW</Link> now commands the highest prices, D24
             Sultan remains a beloved staple — and many long-time durian lovers argue it's the more
             balanced, more "elegant" fruit. At Dukrian, we carry D24 Sultan alongside our flagship MSW
             specifically because so many of our customers consider it an essential part of any durian
@@ -132,7 +132,7 @@ export default function D24SultanPage() {
             </table>
           </div>
           <p>
-            Can't decide? Our <Link to="/durian-bundles">durian bundles</Link> let you try multiple
+            Can't decide? Our <Link to="/durian-bundles/">durian bundles</Link> let you try multiple
             varieties in a single order — the best way to discover your preference.
           </p>
         </section>
@@ -140,7 +140,7 @@ export default function D24SultanPage() {
         <section className="seo-page__section reveal">
           <h2>D24 Sultan Availability and Season</h2>
           <p>
-            D24 Sultan is available at Dukrian during the main <Link to="/durian-season">durian season</Link> in
+            D24 Sultan is available at Dukrian during the main <Link to="/durian-season/">durian season</Link> in
             Singapore, typically June–August and November–January. Because D24 trees are widely planted
             across Malaysia, availability tends to be more consistent than rarer cultivars.
           </p>
@@ -162,7 +162,7 @@ export default function D24SultanPage() {
           </div>
           <p>
             Combine with Blackgold MSW or other varieties for a taste comparison.
-            Check our <Link to="/durian-deals">latest deals</Link> for seasonal pricing.
+            Check our <Link to="/durian-deals/">latest deals</Link> for seasonal pricing.
           </p>
         </section>
 
@@ -200,7 +200,7 @@ export default function D24SultanPage() {
             <summary>Can I order D24 Sultan for same-day delivery?</summary>
             <p>
               Yes. When D24 Sultan is in stock, Dukrian offers{' '}
-              <Link to="/same-day-durian-delivery">same-day delivery</Link> across Singapore. Order by
+              <Link to="/same-day-durian-delivery/">same-day delivery</Link> across Singapore. Order by
               6 PM for evening delivery the same night.
             </p>
           </details>
@@ -210,7 +210,7 @@ export default function D24SultanPage() {
           <h2>Order D24 Sultan from Dukrian</h2>
           <p>
             Rediscover the classic that started it all. Available alongside{' '}
-            <Link to="/blackgold-msw">Blackgold MSW</Link>, XO, Tekka, and more in our{' '}
+            <Link to="/blackgold-msw/">Blackgold MSW</Link>, XO, Tekka, and more in our{' '}
             <Link to="/#shop">online shop</Link>.
           </p>
           <div className="seo-page__actions">

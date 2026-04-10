@@ -10,7 +10,7 @@ export default function BlackgoldMswPage() {
       <SEOHead
         title="Blackgold MSW Durian Singapore — Premium Musang King"
         description="Blackgold MSW (Musang King) durian at Dukrian Singapore. Rich, creamy Pahang Highland Blackgold. De-husked, double-sealed, same-day delivery."
-        path="/blackgold-msw"
+        path="/blackgold-msw/"
         ogType="article"
         article={{ publishedTime: '2025-01-15', modifiedTime: '2026-04-01' }}
         jsonLd={[
@@ -64,7 +64,7 @@ export default function BlackgoldMswPage() {
       />
 
       <article className="seo-page">
-        <Breadcrumbs items={[{ label: 'Blackgold MSW', href: '/blackgold-msw' }]} />
+        <Breadcrumbs items={[{ label: 'Blackgold MSW', href: '/blackgold-msw/' }]} />
 
         <header className="seo-page__hero">
           <h1>Blackgold MSW Durian: Singapore's Premium Musang King</h1>
@@ -133,7 +133,7 @@ export default function BlackgoldMswPage() {
           </ul>
           <p>
             For those new to durian, Blackgold MSW can be intense — we often recommend starting with a
-            milder variety like <Link to="/d24-sultan">D24 Sultan</Link> and working up to Blackgold.
+            milder variety like <Link to="/d24-sultan/">D24 Sultan</Link> and working up to Blackgold.
             For seasoned durian lovers, however, this is the pinnacle.
           </p>
         </section>
@@ -153,7 +153,7 @@ export default function BlackgoldMswPage() {
             <li>Fresh stock arrives around 6 PM daily during season; deliveries run 7–11 PM</li>
           </ol>
           <p>
-            We offer <Link to="/same-day-durian-delivery">same-day durian delivery</Link> across Singapore —
+            We offer <Link to="/same-day-durian-delivery/">same-day durian delivery</Link> across Singapore —
             order by 6 PM for evening delivery the same day. Self-collection at our
             Serangoon Garden location ({SITE.address}) is also available.
           </p>
@@ -174,8 +174,8 @@ export default function BlackgoldMswPage() {
             </div>
           </div>
           <p>
-            Looking for more options? Check out our <Link to="/durian-bundles">durian bundles</Link> for
-            parties and events, or browse <Link to="/durian-deals">current durian deals</Link>.
+            Looking for more options? Check out our <Link to="/durian-bundles/">durian bundles</Link> for
+            parties and events, or browse <Link to="/durian-deals/">current durian deals</Link>.
           </p>
         </section>
 
@@ -197,7 +197,7 @@ export default function BlackgoldMswPage() {
             <p>
               At Dukrian, Blackgold MSW boxes start from S$58 for approximately 420g of de-husked flesh.
               During promotional periods, an upsized box (~520g) is available at S$68. Prices may vary
-              during peak <Link to="/durian-season">durian season</Link>.
+              during peak <Link to="/durian-season/">durian season</Link>.
             </p>
           </details>
 
@@ -214,7 +214,7 @@ export default function BlackgoldMswPage() {
           <details className="seo-faq">
             <summary>Can I get same-day delivery for Blackgold MSW?</summary>
             <p>
-              Yes! Dukrian offers <Link to="/same-day-durian-delivery">same-day delivery</Link> across
+              Yes! Dukrian offers <Link to="/same-day-durian-delivery/">same-day delivery</Link> across
               Singapore. Order by 6 PM for evening delivery between 7–11 PM the same day.
               {' '}{SITE.freeDeliveryNote}
             </p>
@@ -235,9 +235,9 @@ export default function BlackgoldMswPage() {
           <h2>Order Blackgold MSW from Dukrian Today</h2>
           <p>
             Experience the king of durians delivered fresh to your Singapore address. Browse our full
-            catalogue including <Link to="/d24-sultan">D24 Sultan</Link>,{' '}
-            <Link to="/big-durians">large portion boxes</Link>, and{' '}
-            <Link to="/durian-bundles">party bundles</Link>.
+            catalogue including <Link to="/d24-sultan/">D24 Sultan</Link>,{' '}
+            <Link to="/big-durians/">large portion boxes</Link>, and{' '}
+            <Link to="/durian-bundles/">party bundles</Link>.
           </p>
           <div className="seo-page__actions">
             <BtnLink to="/#shop">Shop Blackgold MSW</BtnLink>

@@ -10,7 +10,7 @@ export default function SameDayDeliveryPage() {
       <SEOHead
         title="Same Day Durian Delivery Singapore — Order by 6 PM"
         description="Same-day durian delivery across Singapore from Dukrian. Order Blackgold MSW & D24 Sultan by 6 PM — delivered fresh 7–11 PM, de-husked & sealed."
-        path="/same-day-durian-delivery"
+        path="/same-day-durian-delivery/"
         ogType="article"
         article={{ publishedTime: '2025-01-20', modifiedTime: '2026-04-01' }}
         jsonLd={{
@@ -38,7 +38,7 @@ export default function SameDayDeliveryPage() {
       />
 
       <article className="seo-page">
-        <Breadcrumbs items={[{ label: 'Same Day Durian Delivery', href: '/same-day-durian-delivery' }]} />
+        <Breadcrumbs items={[{ label: 'Same Day Durian Delivery', href: '/same-day-durian-delivery/' }]} />
 
         <header className="seo-page__hero">
           <h1>Same Day Durian Delivery in Singapore</h1>
@@ -84,7 +84,7 @@ export default function SameDayDeliveryPage() {
             <li>
               <strong>Browse and order</strong> — visit our <Link to="/#shop">online shop</Link> and
               add your preferred durians to the cart. Choose from{' '}
-              <Link to="/blackgold-msw">Blackgold MSW</Link>, <Link to="/d24-sultan">D24 Sultan</Link>,
+              <Link to="/blackgold-msw/">Blackgold MSW</Link>, <Link to="/d24-sultan/">D24 Sultan</Link>,
               XO, Tekka, and more.
             </li>
             <li>
@@ -110,7 +110,7 @@ export default function SameDayDeliveryPage() {
           <h2>Same-Day Delivery Fees</h2>
           <p>
             Same-day delivery follows the same fee structure as our{' '}
-            <Link to="/durian-delivery">standard delivery</Link>:
+            <Link to="/durian-delivery/">standard delivery</Link>:
           </p>
           <div className="seo-page__price-cards">
             <div className="seo-page__price-card">
@@ -129,7 +129,7 @@ export default function SameDayDeliveryPage() {
         <section className="seo-page__section reveal">
           <h2>When Same-Day Delivery is Available</h2>
           <p>
-            Same-day delivery operates daily during <Link to="/durian-season">durian season</Link> (typically
+            Same-day delivery operates daily during <Link to="/durian-season/">durian season</Link> (typically
             June–August and November–January) when fresh stock arrives from Malaysia every evening.
           </p>
           <p>
@@ -215,8 +215,8 @@ export default function SameDayDeliveryPage() {
         <section className="seo-page__section reveal seo-page__cta-section">
           <h2>Order Now for Same-Day Delivery</h2>
           <p>
-            Fresh <Link to="/blackgold-msw">Blackgold MSW</Link>,{' '}
-            <Link to="/d24-sultan">D24 Sultan</Link>, and more — at your door tonight.
+            Fresh <Link to="/blackgold-msw/">Blackgold MSW</Link>,{' '}
+            <Link to="/d24-sultan/">D24 Sultan</Link>, and more — at your door tonight.
           </p>
           <div className="seo-page__actions">
             <BtnLink to="/#shop">Order Before 6 PM</BtnLink>

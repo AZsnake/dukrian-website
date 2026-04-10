@@ -10,7 +10,7 @@ export default function BestDurianVarietiesPage() {
       <SEOHead
         title="Best Durian Varieties in Singapore — Complete Name Guide"
         description="Best durian varieties in Singapore: Musang King (MSW), D24 Sultan, XO, Red Prawn, Tekka & more. Flavour profiles, prices & tips from Dukrian."
-        path="/best-durian-varieties"
+        path="/best-durian-varieties/"
         ogType="article"
         article={{ publishedTime: '2025-01-10', modifiedTime: '2026-04-01', author: 'Dukrian Team' }}
         jsonLd={[
@@ -49,7 +49,7 @@ export default function BestDurianVarietiesPage() {
       />
 
       <article className="seo-page">
-        <Breadcrumbs items={[{ label: 'Best Durian Varieties', href: '/best-durian-varieties' }]} />
+        <Breadcrumbs items={[{ label: 'Best Durian Varieties', href: '/best-durian-varieties/' }]} />
 
         <header className="seo-page__hero">
           <h1>Best Durian Varieties: A Complete Guide to Durian Names</h1>
@@ -89,7 +89,7 @@ export default function BestDurianVarietiesPage() {
             <li><strong>Price at Dukrian:</strong> From S$58 (standard box)</li>
           </ul>
           <p>
-            The premium <Link to="/blackgold-msw">Blackgold grade</Link> of Musang King features even darker
+            The premium <Link to="/blackgold-msw/">Blackgold grade</Link> of Musang King features even darker
             flesh and more intense bittersweet/boozy notes, sourced from old-growth trees in Pahang Highlands.
           </p>
 
@@ -105,7 +105,7 @@ export default function BestDurianVarietiesPage() {
             <li><strong>Price at Dukrian:</strong> From S$42</li>
           </ul>
           <p>
-            Read our detailed <Link to="/d24-sultan">D24 Sultan guide</Link> to learn more about this classic variety.
+            Read our detailed <Link to="/d24-sultan/">D24 Sultan guide</Link> to learn more about this classic variety.
           </p>
 
           <h3>3. XO Durian</h3>
@@ -204,13 +204,13 @@ export default function BestDurianVarietiesPage() {
 
           <h3>If you're a first-timer</h3>
           <p>
-            Start with <Link to="/d24-sultan">D24 Sultan</Link> — its milder aroma and balanced flavour
+            Start with <Link to="/d24-sultan/">D24 Sultan</Link> — its milder aroma and balanced flavour
             make it the perfect introduction. If you enjoy it, graduate to Musang King next.
           </p>
 
           <h3>If you want the best of the best</h3>
           <p>
-            Go straight to <Link to="/blackgold-msw">Blackgold MSW</Link>. There's a reason it's the most
+            Go straight to <Link to="/blackgold-msw/">Blackgold MSW</Link>. There's a reason it's the most
             sought-after variety — the flavour complexity is unmatched.
           </p>
 
@@ -227,7 +227,7 @@ export default function BestDurianVarietiesPage() {
 
           <h3>If you want to try everything</h3>
           <p>
-            Order a <Link to="/durian-bundles">tasting bundle</Link> — it's the best way to discover your
+            Order a <Link to="/durian-bundles/">tasting bundle</Link> — it's the best way to discover your
             personal favourite across multiple varieties in one session.
           </p>
         </section>
@@ -247,7 +247,7 @@ export default function BestDurianVarietiesPage() {
           <details className="seo-faq">
             <summary>What is the most expensive durian variety?</summary>
             <p>
-              Musang King, especially <Link to="/blackgold-msw">Blackgold grade</Link>, is the most
+              Musang King, especially <Link to="/blackgold-msw/">Blackgold grade</Link>, is the most
               expensive commonly available variety (S$50–80+ per box). Black Thorn (D200) is another
               premium variety with rising prices.
             </p>
@@ -265,7 +265,7 @@ export default function BestDurianVarietiesPage() {
           <details className="seo-faq">
             <summary>What is the mildest durian for beginners?</summary>
             <p>
-              <Link to="/d24-sultan">D24 Sultan</Link> or D13 Red Prawn are the mildest popular
+              <Link to="/d24-sultan/">D24 Sultan</Link> or D13 Red Prawn are the mildest popular
               varieties. D24 is buttery with subtle bitterness; Red Prawn is sweet with minimal bite.
               Both have lower aroma intensity than Musang King.
             </p>
@@ -284,9 +284,9 @@ export default function BestDurianVarietiesPage() {
         <section className="seo-page__section reveal seo-page__cta-section">
           <h2>Try Singapore's Best Durian Varieties at Dukrian</h2>
           <p>
-            From flagship <Link to="/blackgold-msw">Blackgold MSW</Link> to classic{' '}
-            <Link to="/d24-sultan">D24 Sultan</Link> and beyond — explore our curated selection
-            with <Link to="/same-day-durian-delivery">same-day delivery</Link> across Singapore.
+            From flagship <Link to="/blackgold-msw/">Blackgold MSW</Link> to classic{' '}
+            <Link to="/d24-sultan/">D24 Sultan</Link> and beyond — explore our curated selection
+            with <Link to="/same-day-durian-delivery/">same-day delivery</Link> across Singapore.
           </p>
           <div className="seo-page__actions">
             <BtnLink to="/#shop">Shop All Varieties</BtnLink>

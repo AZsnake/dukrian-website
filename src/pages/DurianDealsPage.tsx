@@ -10,7 +10,7 @@ export default function DurianDealsPage() {
       <SEOHead
         title="Durian Deals Singapore 2026 — Promotions & Discounts"
         description="Best durian deals in Singapore at Dukrian. Seasonal promos on Blackgold MSW, D24 Sultan, bundle discounts & free delivery. 2026 season."
-        path="/durian-deals"
+        path="/durian-deals/"
         ogType="article"
         article={{ publishedTime: '2025-03-01', modifiedTime: '2026-04-01' }}
         jsonLd={{
@@ -38,7 +38,7 @@ export default function DurianDealsPage() {
       />
 
       <article className="seo-page">
-        <Breadcrumbs items={[{ label: 'Durian Deals', href: '/durian-deals' }]} />
+        <Breadcrumbs items={[{ label: 'Durian Deals', href: '/durian-deals/' }]} />
 
         <header className="seo-page__hero">
           <h1>Durian Deals Singapore: Best Promotions for 2026</h1>
@@ -61,7 +61,7 @@ export default function DurianDealsPage() {
               <p className="seo-page__price">S$68 for ~520g</p>
               <p>
                 During selected runs, get approximately 100g extra flesh compared to the standard box —
-                that's nearly 25% more <Link to="/blackgold-msw">Blackgold MSW</Link> at exceptional value.
+                that's nearly 25% more <Link to="/blackgold-msw/">Blackgold MSW</Link> at exceptional value.
               </p>
             </div>
             <div className="seo-page__price-card seo-page__price-card--highlight">
@@ -69,7 +69,7 @@ export default function DurianDealsPage() {
               <p className="seo-page__price">Orders from ~S$105–S$120</p>
               <p>
                 Hit the free delivery threshold and save S$8–S$10 on{' '}
-                <Link to="/durian-delivery">delivery fees</Link>. Just two boxes of MSW typically qualifies.
+                <Link to="/durian-delivery/">delivery fees</Link>. Just two boxes of MSW typically qualifies.
               </p>
             </div>
             <div className="seo-page__price-card seo-page__price-card--highlight">
@@ -86,7 +86,7 @@ export default function DurianDealsPage() {
         <section className="seo-page__section reveal">
           <h2>How to Get the Best Value on Durian</h2>
           <p>
-            Buying smart during <Link to="/durian-season">durian season</Link> can save you significantly.
+            Buying smart during <Link to="/durian-season/">durian season</Link> can save you significantly.
             Here are our insider tips:
           </p>
 
@@ -99,7 +99,7 @@ export default function DurianDealsPage() {
 
           <h3>2. Order in Bulk or Bundles</h3>
           <p>
-            Our <Link to="/durian-bundles">durian bundles</Link> offer better per-gram value than
+            Our <Link to="/durian-bundles/">durian bundles</Link> offer better per-gram value than
             single boxes. A party bundle for 10–20 people works out significantly cheaper per person
             than individual orders.
           </p>
@@ -118,8 +118,8 @@ export default function DurianDealsPage() {
 
           <h3>5. Try Value Varieties</h3>
           <p>
-            While <Link to="/blackgold-msw">Blackgold MSW</Link> is our premium flagship, varieties like{' '}
-            <Link to="/d24-sultan">D24 Sultan</Link> (from S$42) and D13 Red Prawn (from S$44) offer
+            While <Link to="/blackgold-msw/">Blackgold MSW</Link> is our premium flagship, varieties like{' '}
+            <Link to="/d24-sultan/">D24 Sultan</Link> (from S$42) and D13 Red Prawn (from S$44) offer
             excellent flavour at a lower price point.
           </p>
         </section>
@@ -149,7 +149,7 @@ export default function DurianDealsPage() {
             </table>
           </div>
           <p>
-            Read our full <Link to="/durian-season">durian season guide</Link> for detailed timing information.
+            Read our full <Link to="/durian-season/">durian season guide</Link> for detailed timing information.
           </p>
         </section>
 

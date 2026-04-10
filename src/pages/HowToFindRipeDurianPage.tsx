@@ -10,7 +10,7 @@ export default function HowToFindRipeDurianPage() {
       <SEOHead
         title="How to Find Ripe & Good Durian — Expert Guide from Singapore"
         description="How to find ripe durian: expert tips from Dukrian Singapore. Visual cues, aroma test, sound test & stem check for perfect Blackgold MSW & D24."
-        path="/how-to-find-ripe-good-durian"
+        path="/how-to-find-ripe-good-durian/"
         ogType="article"
         article={{ publishedTime: '2025-01-25', modifiedTime: '2026-04-01', author: 'Dukrian Team' }}
         jsonLd={[
@@ -54,7 +54,7 @@ export default function HowToFindRipeDurianPage() {
       />
 
       <article className="seo-page">
-        <Breadcrumbs items={[{ label: 'How to Find Ripe Durian', href: '/how-to-find-ripe-good-durian' }]} />
+        <Breadcrumbs items={[{ label: 'How to Find Ripe Durian', href: '/how-to-find-ripe-good-durian/' }]} />
 
         <header className="seo-page__hero">
           <h1>How to Find Ripe, Good Quality Durian: An Expert Guide</h1>
@@ -68,7 +68,7 @@ export default function HowToFindRipeDurianPage() {
           <h2>Why Knowing How to Assess Durian Matters</h2>
           <p>
             Durian is unlike most fruit — you can't see the flesh before buying, and the price premium
-            for varieties like <Link to="/blackgold-msw">Blackgold MSW</Link> means a bad pick hurts.
+            for varieties like <Link to="/blackgold-msw/">Blackgold MSW</Link> means a bad pick hurts.
             Whether you're choosing whole fruit at a stall or assessing de-husked portions, understanding
             what "good durian" looks, smells, and feels like protects your investment and maximises your
             enjoyment.
@@ -105,7 +105,7 @@ export default function HowToFindRipeDurianPage() {
             <li><strong>Rich, sweet, complex aroma</strong> — the durian is ripe and ready to eat</li>
             <li><strong>Little to no smell</strong> — the fruit is underripe; the flesh will be starchy and bland</li>
             <li><strong>Sour or fermented smell</strong> — overripe; the flesh may be mushy and unpleasant</li>
-            <li><strong>Boozy/alcoholic notes</strong> — can indicate peak ripeness for varieties like Blackgold MSW, or over-ripeness for milder varieties like <Link to="/d24-sultan">D24 Sultan</Link></li>
+            <li><strong>Boozy/alcoholic notes</strong> — can indicate peak ripeness for varieties like Blackgold MSW, or over-ripeness for milder varieties like <Link to="/d24-sultan/">D24 Sultan</Link></li>
           </ul>
 
           <h3>3. The Shake Test</h3>
@@ -148,7 +148,7 @@ export default function HowToFindRipeDurianPage() {
             fruit — heavier durians for their size generally have more flesh and smaller seeds.
           </p>
           <p>
-            For <Link to="/blackgold-msw">Musang King</Link> specifically, look for the characteristic
+            For <Link to="/blackgold-msw/">Musang King</Link> specifically, look for the characteristic
             five-pointed star pattern on the base of the fruit, which is a visual identifier for this cultivar.
           </p>
         </section>
@@ -186,14 +186,14 @@ export default function HowToFindRipeDurianPage() {
 
           <h3>Choosing Good Blackgold MSW</h3>
           <p>
-            The best <Link to="/blackgold-msw">Blackgold MSW</Link> has deep amber to dark golden flesh,
+            The best <Link to="/blackgold-msw/">Blackgold MSW</Link> has deep amber to dark golden flesh,
             a pronounced bittersweet aroma, and thick, custardy texture. If buying whole, look for the
             star-shaped base pattern and relatively short, pyramidal thorns characteristic of Musang King.
           </p>
 
           <h3>Choosing Good D24 Sultan</h3>
           <p>
-            Quality <Link to="/d24-sultan">D24 Sultan</Link> has uniformly pale yellow flesh that's thick
+            Quality <Link to="/d24-sultan/">D24 Sultan</Link> has uniformly pale yellow flesh that's thick
             and smooth. The aroma should be sweet and buttery, not too pungent. D24's larger seeds mean
             less flesh per fruit — look for lobes that are plump and fully developed.
           </p>
@@ -263,9 +263,9 @@ export default function HowToFindRipeDurianPage() {
           <h2>Skip the Guesswork — Order from Dukrian</h2>
           <p>
             Our expert team does the selection for you. Every box of{' '}
-            <Link to="/blackgold-msw">Blackgold MSW</Link> and{' '}
-            <Link to="/d24-sultan">D24 Sultan</Link> is graded for quality before it reaches
-            your door via <Link to="/same-day-durian-delivery">same-day delivery</Link>.
+            <Link to="/blackgold-msw/">Blackgold MSW</Link> and{' '}
+            <Link to="/d24-sultan/">D24 Sultan</Link> is graded for quality before it reaches
+            your door via <Link to="/same-day-durian-delivery/">same-day delivery</Link>.
           </p>
           <div className="seo-page__actions">
             <BtnLink to="/#shop">Shop Quality Durian</BtnLink>

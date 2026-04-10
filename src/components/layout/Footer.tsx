@@ -42,17 +42,17 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <Link className="site-footer__link" to="/durian-delivery">
+              <Link className="site-footer__link" to="/durian-delivery/">
                 Delivery &amp; pickup
               </Link>
             </li>
             <li>
-              <Link className="site-footer__link" to="/durian-deals">
+              <Link className="site-footer__link" to="/durian-deals/">
                 Durian deals
               </Link>
             </li>
             <li>
-              <Link className="site-footer__link" to="/durian-bundles">
+              <Link className="site-footer__link" to="/durian-bundles/">
                 Bundles &amp; parties
               </Link>
             </li>

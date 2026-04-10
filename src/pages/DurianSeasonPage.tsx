@@ -10,7 +10,7 @@ export default function DurianSeasonPage() {
       <SEOHead
         title="Durian Season Singapore 2026 — When Is Durian Season?"
         description="Guide to durian season in Singapore & Malaysia 2026. Peak harvest months, best time for Blackgold MSW & D24 Sultan, pricing tips from Dukrian."
-        path="/durian-season"
+        path="/durian-season/"
         ogType="article"
         article={{ publishedTime: '2025-01-10', modifiedTime: '2026-04-01' }}
         jsonLd={{
@@ -38,7 +38,7 @@ export default function DurianSeasonPage() {
       />
 
       <article className="seo-page">
-        <Breadcrumbs items={[{ label: 'Durian Season', href: '/durian-season' }]} />
+        <Breadcrumbs items={[{ label: 'Durian Season', href: '/durian-season/' }]} />
 
         <header className="seo-page__hero">
           <h1>Durian Season 2026: Your Complete Singapore Guide</h1>
@@ -146,12 +146,12 @@ export default function DurianSeasonPage() {
           </p>
           <ul>
             <li>
-              <strong><Link to="/blackgold-msw">Blackgold MSW (Musang King)</Link></strong> — available
+              <strong><Link to="/blackgold-msw/">Blackgold MSW (Musang King)</Link></strong> — available
               throughout both main and minor seasons. Peak quality lots from old-growth Pahang trees
               arrive in July.
             </li>
             <li>
-              <strong><Link to="/d24-sultan">D24 Sultan</Link></strong> — widely available during both
+              <strong><Link to="/d24-sultan/">D24 Sultan</Link></strong> — widely available during both
               seasons. One of the most consistently available premium varieties.
             </li>
             <li>
@@ -181,14 +181,14 @@ export default function DurianSeasonPage() {
             </li>
             <li>
               <strong>Try multiple varieties</strong> — season is the time to order a{' '}
-              <Link to="/durian-bundles">tasting bundle</Link> and compare
+              <Link to="/durian-bundles/">tasting bundle</Link> and compare
             </li>
             <li>
               <strong>Stock up for off-season</strong> — buy extra during peak season and freeze it
               properly for enjoyment in the off-months
             </li>
             <li>
-              <strong>Check for <Link to="/durian-deals">deals</Link></strong> — we run our best
+              <strong>Check for <Link to="/durian-deals/">deals</Link></strong> — we run our best
               promotions during peak supply periods
             </li>
           </ol>
@@ -209,7 +209,7 @@ export default function DurianSeasonPage() {
             <summary>When is the best time to buy durian?</summary>
             <p>
               Late June through early August offers the best combination of quality, variety, and price.
-              For the absolute best <Link to="/blackgold-msw">Blackgold MSW</Link> lots, mid-July
+              For the absolute best <Link to="/blackgold-msw/">Blackgold MSW</Link> lots, mid-July
               is the sweet spot.
             </p>
           </details>
@@ -244,7 +244,7 @@ export default function DurianSeasonPage() {
           <h2>Stay Updated on Durian Season 2026</h2>
           <p>
             Join our WhatsApp broadcast to receive daily updates on fresh arrivals, seasonal
-            varieties, and <Link to="/durian-deals">special deals</Link> throughout the season.
+            varieties, and <Link to="/durian-deals/">special deals</Link> throughout the season.
           </p>
           <div className="seo-page__actions">
             <BtnLink to="/#shop">Shop When In Season</BtnLink>

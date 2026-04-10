@@ -10,7 +10,7 @@ export default function BigDuriansPage() {
       <SEOHead
         title="Big Durians Singapore — Large Portions & Generous Boxes"
         description="Big durians & generous portions from Dukrian Singapore. Blackgold MSW boxes often above label weight. Free upsize promos & XL packs."
-        path="/big-durians"
+        path="/big-durians/"
         ogType="article"
         article={{ publishedTime: '2025-02-15', modifiedTime: '2026-04-01' }}
         jsonLd={{
@@ -38,7 +38,7 @@ export default function BigDuriansPage() {
       />
 
       <article className="seo-page">
-        <Breadcrumbs items={[{ label: 'Big Durians', href: '/big-durians' }]} />
+        <Breadcrumbs items={[{ label: 'Big Durians', href: '/big-durians/' }]} />
 
         <header className="seo-page__hero">
           <h1>Big Durians: Generous Portions That Deliver</h1>
@@ -51,7 +51,7 @@ export default function BigDuriansPage() {
         <section className="seo-page__section reveal">
           <h2>Why Size Matters with Durian</h2>
           <p>
-            When you're paying premium prices for <Link to="/blackgold-msw">Blackgold MSW</Link> or
+            When you're paying premium prices for <Link to="/blackgold-msw/">Blackgold MSW</Link> or
             other high-quality durian varieties, the last thing you want is to open a box and feel
             shortchanged. The durian market in Singapore has a well-known problem: many sellers quote
             weights that don't match what's in the box, or use packaging that makes portions look larger
@@ -88,7 +88,7 @@ export default function BigDuriansPage() {
               <h3>Party / Event Portions</h3>
               <p className="seo-page__price">Custom sizing</p>
               <p>
-                Need XL portions for a gathering? Our <Link to="/durian-bundles">bundle packages</Link>{' '}
+                Need XL portions for a gathering? Our <Link to="/durian-bundles/">bundle packages</Link>{' '}
                 include generous servings scaled to your headcount.
               </p>
             </div>
@@ -134,7 +134,7 @@ export default function BigDuriansPage() {
           <h3>Tree Age</h3>
           <p>
             Young durian trees (under 8 years) produce smaller fruit. Trees over 15 years tend to
-            produce larger, more concentrated fruit. The best <Link to="/blackgold-msw">Blackgold MSW</Link>{' '}
+            produce larger, more concentrated fruit. The best <Link to="/blackgold-msw/">Blackgold MSW</Link>{' '}
             comes from trees that have been producing for decades.
           </p>
 
@@ -156,7 +156,7 @@ export default function BigDuriansPage() {
           <p>
             The right amount of rain during fruit development is crucial. Too much rain can dilute
             flavours; too little can stunt growth. The best{' '}
-            <Link to="/durian-season">durian season</Link> years produce the biggest, most flavourful fruit.
+            <Link to="/durian-season/">durian season</Link> years produce the biggest, most flavourful fruit.
           </p>
         </section>
 
@@ -168,20 +168,20 @@ export default function BigDuriansPage() {
               for a modest price increase
             </li>
             <li>
-              <strong>Order bundles</strong> — <Link to="/durian-bundles">multi-box bundles</Link> often
+              <strong>Order bundles</strong> — <Link to="/durian-bundles/">multi-box bundles</Link> often
               include extra portions as bonus
             </li>
             <li>
               <strong>Buy during peak season</strong> — July's abundant supply means we can be more
-              generous with portioning. Check our <Link to="/durian-deals">current deals</Link>
+              generous with portioning. Check our <Link to="/durian-deals/">current deals</Link>
             </li>
             <li>
-              <strong>Try different varieties</strong> — <Link to="/d24-sultan">D24 Sultan</Link> and
+              <strong>Try different varieties</strong> — <Link to="/d24-sultan/">D24 Sultan</Link> and
               D13 Red Prawn offer generous portions at lower price points than MSW
             </li>
             <li>
               <strong>Combine with friends</strong> — split a large order to hit the{' '}
-              <Link to="/durian-delivery">free delivery threshold</Link> and save on delivery fees
+              <Link to="/durian-delivery/">free delivery threshold</Link> and save on delivery fees
             </li>
           </ol>
         </section>
@@ -202,7 +202,7 @@ export default function BigDuriansPage() {
             <summary>Can I get extra large durian portions?</summary>
             <p>
               Yes. Order multiple boxes or request custom large portions via WhatsApp. For parties
-              and events, our <Link to="/durian-bundles">bundle packages</Link> include generous
+              and events, our <Link to="/durian-bundles/">bundle packages</Link> include generous
               XL portions scaled to your headcount.
             </p>
           </details>

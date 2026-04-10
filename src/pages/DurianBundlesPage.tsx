@@ -10,7 +10,7 @@ export default function DurianBundlesPage() {
       <SEOHead
         title="Durian Bundles Singapore — Party Packs & Multi-Variety Sets"
         description="Durian bundles & party packs from Dukrian Singapore. Tasting sets, corporate packages & family bundles with Blackgold MSW & D24 Sultan."
-        path="/durian-bundles"
+        path="/durian-bundles/"
         ogType="article"
         article={{ publishedTime: '2025-02-01', modifiedTime: '2026-04-01' }}
         jsonLd={{
@@ -38,7 +38,7 @@ export default function DurianBundlesPage() {
       />
 
       <article className="seo-page">
-        <Breadcrumbs items={[{ label: 'Durian Bundles', href: '/durian-bundles' }]} />
+        <Breadcrumbs items={[{ label: 'Durian Bundles', href: '/durian-bundles/' }]} />
 
         <header className="seo-page__hero">
           <h1>Durian Bundles: Multi-Variety Packs for Every Occasion</h1>
@@ -53,8 +53,8 @@ export default function DurianBundlesPage() {
           <p>
             The best way to experience durian isn't just eating one variety — it's comparing several
             side by side. A durian bundle lets you taste the rich, bittersweet depth of{' '}
-            <Link to="/blackgold-msw">Blackgold MSW</Link> right next to the gentle butteriness of{' '}
-            <Link to="/d24-sultan">D24 Sultan</Link>, the fermented complexity of XO, and the nutty
+            <Link to="/blackgold-msw/">Blackgold MSW</Link> right next to the gentle butteriness of{' '}
+            <Link to="/d24-sultan/">D24 Sultan</Link>, the fermented complexity of XO, and the nutty
             sweetness of Tekka.
           </p>
           <p>
@@ -131,7 +131,7 @@ export default function DurianBundlesPage() {
 
           <h3>The "MSW Experience" (Best for Musang King fans)</h3>
           <p>
-            Two or three boxes of <Link to="/blackgold-msw">Blackgold MSW</Link> at different grades —
+            Two or three boxes of <Link to="/blackgold-msw/">Blackgold MSW</Link> at different grades —
             compare standard and promo sizes side by side. Add a D24 Sultan for contrast.
           </p>
 
@@ -143,7 +143,7 @@ export default function DurianBundlesPage() {
 
           <h3>The "Office Crowd-Pleaser"</h3>
           <p>
-            Three or more large boxes featuring <Link to="/d24-sultan">D24 Sultan</Link> (the most
+            Three or more large boxes featuring <Link to="/d24-sultan/">D24 Sultan</Link> (the most
             approachable variety) as the base, plus one or two premium MSW boxes for the adventurous
             colleagues. Works well for 15–25 people.
           </p>
@@ -161,8 +161,8 @@ export default function DurianBundlesPage() {
               at <strong>+65 {SITE.whatsappDisplay}</strong> for a custom bundle proposal
             </li>
             <li>
-              <strong>Choose delivery</strong> — <Link to="/durian-delivery">standard evening delivery</Link>{' '}
-              or <Link to="/same-day-durian-delivery">same-day delivery</Link> available
+              <strong>Choose delivery</strong> — <Link to="/durian-delivery/">standard evening delivery</Link>{' '}
+              or <Link to="/same-day-durian-delivery/">same-day delivery</Link> available
             </li>
             <li>
               <strong>Enjoy together</strong> — receive your freshly packed bundle and start tasting

@@ -10,7 +10,7 @@ export default function DurianDeliveryPage() {
       <SEOHead
         title="Durian Delivery Singapore — Fresh Evening Delivery Island-Wide"
         description="Fresh durian delivery across Singapore from Dukrian Serangoon Garden. Evening delivery 7–11 PM, free from ~S$105. Blackgold MSW & D24 Sultan."
-        path="/durian-delivery"
+        path="/durian-delivery/"
         ogType="article"
         article={{ publishedTime: '2025-01-20', modifiedTime: '2026-04-01' }}
         jsonLd={[
@@ -53,7 +53,7 @@ export default function DurianDeliveryPage() {
       />
 
       <article className="seo-page">
-        <Breadcrumbs items={[{ label: 'Durian Delivery', href: '/durian-delivery' }]} />
+        <Breadcrumbs items={[{ label: 'Durian Delivery', href: '/durian-delivery/' }]} />
 
         <header className="seo-page__hero">
           <h1>Durian Delivery in Singapore: Fresh to Your Door</h1>
@@ -111,7 +111,7 @@ export default function DurianDeliveryPage() {
           <h3>Delivery Hours</h3>
           <p>
             {SITE.deliveryWindow}. Our store operates {SITE.hours.toLowerCase()}.
-            For <Link to="/same-day-durian-delivery">same-day delivery</Link>, place your order by 6 PM.
+            For <Link to="/same-day-durian-delivery/">same-day delivery</Link>, place your order by 6 PM.
           </p>
 
           <h3>Self-Collection</h3>
@@ -144,7 +144,7 @@ export default function DurianDeliveryPage() {
           <p>
             <strong>Pro tip:</strong> ordering with friends or neighbours to reach the free delivery
             threshold is a popular strategy. Two boxes of{' '}
-            <Link to="/blackgold-msw">Blackgold MSW</Link> typically qualifies for free delivery.
+            <Link to="/blackgold-msw/">Blackgold MSW</Link> typically qualifies for free delivery.
           </p>
         </section>
 
@@ -229,7 +229,7 @@ export default function DurianDeliveryPage() {
             <summary>Do you deliver to offices and events?</summary>
             <p>
               Yes. We deliver to offices, event venues, and any Singapore address. For large{' '}
-              <Link to="/durian-bundles">event orders</Link>, we can arrange earlier delivery
+              <Link to="/durian-bundles/">event orders</Link>, we can arrange earlier delivery
               times by prior arrangement.
             </p>
           </details>
@@ -238,8 +238,8 @@ export default function DurianDeliveryPage() {
         <section className="seo-page__section reveal seo-page__cta-section">
           <h2>Order Fresh Durian Delivery Today</h2>
           <p>
-            Shop our full range of <Link to="/blackgold-msw">Blackgold MSW</Link>,{' '}
-            <Link to="/d24-sultan">D24 Sultan</Link>, and more. Free delivery on qualifying orders.
+            Shop our full range of <Link to="/blackgold-msw/">Blackgold MSW</Link>,{' '}
+            <Link to="/d24-sultan/">D24 Sultan</Link>, and more. Free delivery on qualifying orders.
           </p>
           <div className="seo-page__actions">
             <BtnLink to="/#shop">Shop &amp; Get Delivery</BtnLink>
